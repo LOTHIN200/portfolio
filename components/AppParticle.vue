@@ -7,7 +7,7 @@ const options = {
   },
   background: {
     color: {
-      value: "#000000", // Clean white background
+      // value: "#000000", // Clean white background
     },
   },
   particles: {
@@ -67,7 +67,7 @@ const options = {
         mode: "grab", // Create a connection on hover
       },
       onClick: {
-        enable: false, // No click-based interactions
+        enable: true, // No click-based interactions
       },
       resize: true, // Handle window resizing
     },
