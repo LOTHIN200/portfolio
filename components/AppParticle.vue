@@ -7,7 +7,7 @@ const options = {
   },
   background: {
     color: {
-      value: "#4c14bc", // Clean white background
+      value: "#000000", // Clean white background
     },
   },
   particles: {
