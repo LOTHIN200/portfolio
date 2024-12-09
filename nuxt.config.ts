@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/color-mode", "@nuxt/image"],
+  modules: ["@nuxtjs/color-mode", "@nuxt/image", "nuxt-particles"],
   css: ["~/assets/css/app.css"],
   colorMode: {
     preference: "system",
@@ -14,6 +14,10 @@ export default defineNuxtConfig({
     classPrefix: "",
     classSuffix: "",
     storageKey: "nuxt-color-mode",
+  },
+  particles: {
+    mode: "full", // 'full' | 'slim' | 'basic' | 'custom'
+    lazy: true,
   },
   postcss: {
     plugins: {

@@ -1,11 +1,10 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
-    <AppHeader/>
-    <slot/>
-    <AppFooter/>
-  </div>  
+    <AppParticle />
+    <AppHeader />
+    <slot />
+    <AppFooter />
+  </div>
 </template>
