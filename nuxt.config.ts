@@ -3,7 +3,33 @@ export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/color-mode", "@nuxt/image", "nuxt-particles"],
+  modules: [
+    "@nuxtjs/color-mode",
+    "@nuxt/image",
+    "nuxt-particles",
+    "@nuxtjs/i18n",
+  ],
+  i18n: {
+    locales: [
+      {
+        code: "en",
+        name: "English",
+        file: "en.json",
+        iso: "en",
+      },
+      {
+        code: "kh",
+        name: "Khmer",
+        file: "kh.json",
+        iso: "kh",
+      },
+    ],
+    defaultLocale: "en",
+    strategy: "prefix_except_default",
+    langDir: "locales/",
+    lazy: true,
+    vueI18n: "./i18n/i18n.config.ts",
+  },
   css: ["~/assets/css/app.css"],
   colorMode: {
     preference: "system",

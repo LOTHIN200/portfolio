@@ -35,7 +35,7 @@ const navLinks = [
             <span class="flex">
               <img src="/logoCHUSHIN.png" alt="Illustratuin about" width="50"
             </span>
-            <span class="text-lg text-gray-700 dark:text-white">CHUSHIN</span>
+            <span class="text-lg text-gray-700 dark:text-white">{{ $t("lothin") }}</span>
           </NuxtLink>
         </div>
         <div
@@ -55,6 +55,7 @@ const navLinks = [
 
         <div class="flex items-center bg-inherit gap-1 lg:gap-3 min-w-max">
           <ElementsThemeSwitcher />
+          <ElementsLangSwitcher />
           <div class="hidden lg:flex lg:items-center gap-4">
             <AtomsLinkBtn href="#" variant="secondary"> Signin </AtomsLinkBtn>
             <!-- <AtomsLinkBtn href="#" variant="primary"> Join Us </AtomsLinkBtn> -->

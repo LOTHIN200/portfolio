@@ -21,10 +21,12 @@
 @tailwind utilities;
 html{
     @apply scroll-smooth;
+    font-family: KhmerFont;
 }
 
 body{
     @apply bg-body transition overflow-x-hidden;
+    font-family: KhmerFont;
 }
 
 .invisible-scroll{
@@ -39,3 +41,11 @@ body{
 .invisible-scroll::-webkit-scrollbar {
     display: none;
 }
+
+@font-face {
+    font-family: 'KhmerFont';
+    src: url('../font/Kantumruy-Regular.woff') format('woff'); /* Adjust the path as needed */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
