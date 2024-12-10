@@ -11,7 +11,6 @@ const availableLocales = computed(() => {
 });
 
 const currentLocale = computed(() => locale.value);
-
 // Dropdown state
 const isLocaleDropdownOpen = useState("isLocaleDropdownOpen", () => false);
 
@@ -29,7 +28,9 @@ function toggleLocaleDropdown(event: MouseEvent) {
       @click="toggleLocaleDropdown"
     >
       <span>
-        {{ currentLocale }}
+        <ElementsIconsEn v-if="currentLocale === 'en'" />
+        <ElementsIconsKh v-else-if="currentLocale === 'kh'" />
+        <span> </span>
       </span>
     </button>
 
