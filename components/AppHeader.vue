@@ -31,7 +31,7 @@ const navLinks = [
       <nav class="flex items-center justify-between w-full relative">
         <!-- app logo -->
         <div class="inline-flex relative bg-inherit">
-          <NuxtLink :to="makeLink('/')" class="flex items-center gap-2">
+          <NuxtLink class="flex items-center gap-2">
             <span class="flex">
               <img src="/logoCHUSHIN.png" alt="Illustratuin about" width="50"
             </span>
@@ -47,7 +47,7 @@ const navLinks = [
           >
             <AtomsNavLink
               v-for="navItem in navLinks"
-              :href="makeLink(navItem.href)"
+              :href="navItem.href"
               :text="navItem.text"
             />
           </ul>

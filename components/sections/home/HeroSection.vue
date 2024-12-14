@@ -17,10 +17,10 @@
       <div
         class="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto"
       >
-        <div class="lg:py-6">
+        <div class="lg:py-2">
           <div class="text-center lg:text-left">
             <h1
-              class="text-gray-800 space-x-8 pt-4 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl"
+              class="text-gray-600 space-x-8 pt-4 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl"
             >
               <span>{{ typedText1 }}</span>
               <span
@@ -29,7 +29,7 @@
               ><br />
             </h1>
             <h1
-              class="text-gray-800 pt-8 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl"
+              class="text-gray-600 pt-8 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl"
             >
               <span>{{ typedText3 }}</span>
             </h1>
@@ -129,12 +129,12 @@
               class="absolute z-0 top-1/2 -translate-y-1/2 w-5/6 right-0 h-[calc(80%+20px)] bg-gradient-to-tr opacity-25 from-primary to-pink-300 dark:from-[#570cac] dark:to-primary blur-2xl"
             ></div>
             <div
-              class="absolute w-3/5 h-full z-10 p-1 -translate-y-1/2 top-1/2 right-3 rounded-3xl bg-white dark:bg-body shadow-lg shadow-box-shadow border border-box-border"
+              class="absolute w-2/4 h-full z-10 p-1 -translate-y-1/2 top-1/2 right-3 rounded-3xl bg-white dark:bg-body shadow-lg shadow-box-shadow border border-box-border"
             >
               <img
                 src="/images/chushin.jpg"
                 alt="In studio"
-                width="500"
+                width="400"
                 height="auto"
                 loading="lazy"
                 class="w-full h-full rounded-2xl object-cover"
