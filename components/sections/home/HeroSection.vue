@@ -9,23 +9,19 @@
       ></div>
     </div>
     <AtomsContainer class-name="relative">
-      <div aria-hidden="true" class="absolute inset-y-0 w-44 left-0 hidden dark:flex">
-        <div
-          class="h-full md:h-1/2 lg:h-full w-full bg-gradient-to-tr opacity-40 dark:blur-2xl dark:from-[#570cac] dark:opacity-20"
-        ></div>
-      </div>
       <div
         class="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto"
       >
         <div class="lg:py-2">
-          <div class="text-center lg:text-left">
+          <div class="text-center lg:text-left h-48 md:h-42 lg:h-50">
             <h1
               class="text-gray-600 space-x-8 pt-4 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl"
             >
               <span>{{ typedText1 }}</span>
               <span
                 class="text-transparent pl-18 pt-30 bg-clip-text bg-gradient-to-br from-primary to-[#8cd66a]"
-                >{{ typedText2 }}</span
+              >
+                {{ typedText2 }} </span
               ><br />
             </h1>
             <h1
