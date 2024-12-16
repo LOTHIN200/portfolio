@@ -2,5 +2,11 @@
   "lothin": "LOTHIN",
   "find": "Find",
   "developer": "Developer",
-  "on_internet": "On Internet"
+  "on_internet": "On Internet",
+  "database_skills": "Database Skills",
+  "framework_skills": "Framework Skills",
+  "core_skill": "Core Skills",
+  "others": "Others",
+  "basic_skills": "Basic Skills",
+  "footer_details": "Passionate about building and designing innovative web and software solutions to solve real-world challenges."
 }
