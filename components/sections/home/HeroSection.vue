@@ -27,7 +27,8 @@
             <h1
               class="text-gray-600 pt-8 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl"
             >
-              <span>{{ typedText3 }}</span>
+              <span>{{ typedText3 }}
+              </span>
             </h1>
           </div>
 

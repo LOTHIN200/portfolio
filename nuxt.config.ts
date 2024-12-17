@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "nuxt-particles",
     "@nuxtjs/i18n",
+    "@pinia/nuxt",
   ],
   i18n: {
     locales: [
