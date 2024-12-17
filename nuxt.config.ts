@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     "nuxt-particles",
     "@nuxtjs/i18n",
     "@pinia/nuxt",
+    "@tresjs/nuxt",
   ],
   i18n: {
     locales: [
