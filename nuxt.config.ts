@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     "nuxt-particles",
     "@nuxtjs/i18n",
     "@pinia/nuxt",
+    "@formkit/auto-animate",
     "@tresjs/nuxt",
   ],
   i18n: {
