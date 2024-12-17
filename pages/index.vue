@@ -1,4 +1,7 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: "intro",
+});
 useHead({
   title: "DEV",
   meta: [{ name: "description", content: "Podux Podcast landing page website." }],
@@ -7,6 +10,7 @@ useHead({
 </script>
 <template>
   <div>
+    <AppParticle />
     <SectionsHomeHeroSection />
     <!-- <SectionsHomeLatestPodcast /> -->
     <SectionsHomePopularPodcasts />

@@ -28,7 +28,6 @@
     "@formkit/auto-animate": "^0.8.2",
     "@nuxtjs/i18n": "^9.1.1",
     "@pinia/nuxt": "^0.9.0",
-    "@tresjs/nuxt": "^3.0.7",
     "nuxt-particles": "^0.3.0"
   }
 }
