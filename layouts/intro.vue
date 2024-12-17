@@ -31,7 +31,7 @@ const codeSnippets = [
   "npm install",
   "// Firing up the dev server 🌟",
   "npm run dev",
-  "// Ready to build something extraordinary? ✨",
+  "// Ready to View ✨",
   "<h1>Welcome, LOTHIN DEV! 💻</h1>",
   "// Empowering ideas with Nuxt 3 ⚡️",
 ];
