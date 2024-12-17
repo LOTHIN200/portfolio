@@ -14,7 +14,7 @@
       </div>
     </div>
     <transition name="fade">
-      <NuxtPage v-if="!showIntro" />
+      <slot v-if="!showIntro" />
     </transition>
   </div>
 </template>

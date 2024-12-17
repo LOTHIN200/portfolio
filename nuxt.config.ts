@@ -6,7 +6,6 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
       title: "Dev",
     },
-    
   },
   ssr: true,
   compatibilityDate: "2024-11-01",
@@ -17,8 +16,6 @@ export default defineNuxtConfig({
     "nuxt-particles",
     "@nuxtjs/i18n",
     "@pinia/nuxt",
-    "@formkit/auto-animate",
-    "@tresjs/nuxt",
   ],
   i18n: {
     locales: [

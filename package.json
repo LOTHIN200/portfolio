@@ -25,7 +25,6 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@formkit/auto-animate": "^0.8.2",
     "@nuxtjs/i18n": "^9.1.1",
     "@pinia/nuxt": "^0.9.0",
     "nuxt-particles": "^0.3.0"
