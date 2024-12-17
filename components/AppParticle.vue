@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { onMounted } from "vue";
 import type { Container } from "tsparticles-engine";
+
 const options = {
   fullScreen: {
     enable: true,
@@ -100,10 +102,17 @@ const options = {
   retina_detect: true, // Optimize for retina screens
 };
 
+let particlesContainer: Container | null = null;
+
 const onLoad = (container: Container) => {
-  container.pause();
-  setTimeout(() => container.play(), 2000);
+  particlesContainer = container; // Store the container reference
 };
+
+onMounted(() => {
+  if (particlesContainer) {
+    particlesContainer.play(); // Start the animation immediately
+  }
+});
 </script>
 
 <template>

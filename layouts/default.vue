@@ -5,9 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/vue";
 <template>
   <div>
     <SpeedInsights />
-
-    <AppHeader />
+    <!-- <AppParticle /> -->
     <slot />
-    <AppFooter />
   </div>
 </template>

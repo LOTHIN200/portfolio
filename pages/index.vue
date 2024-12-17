@@ -10,6 +10,7 @@ useHead({
 </script>
 <template>
   <div>
+    <AppHeader />
     <AppParticle />
     <SectionsHomeHeroSection />
     <!-- <SectionsHomeLatestPodcast /> -->
@@ -17,5 +18,6 @@ useHead({
     <SectionsAboutPodux />
     <SectionsWhyUs />
     <SectionsCallToAction />
+    <AppFooter />
   </div>
 </template>
