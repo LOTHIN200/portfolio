@@ -20,7 +20,7 @@
     >
       <div class="h-full">
         <h2
-          class="font-semibold text-base md:text-lg lg:text-xl line-clamp-2 md:line-clamp-3 text-gray-700 dark:text-white"
+          class="font-semibold pt-4 text-base md:text-lg lg:text-xl line-clamp-2 md:line-clamp-3 text-gray-700 dark:text-white"
         >
           {{ title }}
         </h2>

@@ -27,8 +27,7 @@
             <h1
               class="text-gray-600 pt-8 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl"
             >
-              <span>{{ typedText3 }}
-              </span>
+              <span>{{ typedText3 }} </span>
             </h1>
           </div>
 
@@ -48,10 +47,10 @@
               variant="primary"
               class="w-full sm:w-max flex justify-center"
             >
-              Join us
+              {{ $t("contact") }}
             </AtomsLinkBtn>
 
-            <AtomsLinkBtn
+            <!-- <AtomsLinkBtn
               href="#"
               variant="costum"
               costum-span-class="px-6 md:px-7 hover:bg-primary/10"
@@ -77,7 +76,7 @@
 
                 <span> Listening Episode </span>
               </div>
-            </AtomsLinkBtn>
+            </AtomsLinkBtn> -->
           </div>
           <div class="pt-8 lg:pt-10 w-max mx-auto lg:mx-0">
             <div

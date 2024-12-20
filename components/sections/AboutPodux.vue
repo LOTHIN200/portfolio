@@ -38,10 +38,10 @@
                 <h3
                   class="text-gray-800 dark:text-white font-bold text-xl sm:text-2xl lg:text-3xl"
                 >
-                  + 45
+                  2019
                 </h3>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                  Episodes
+                  High School Graduated
                 </p>
               </div>
               <div
