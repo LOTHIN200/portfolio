@@ -3,7 +3,7 @@
     <AtomsContainer>
       <div class="flex justify-between items-center pb-6">
         <div class="">
-          <AtomsTitle texte="other_experiences" />
+          <AtomsTitle :texte="$t('other_experiences')" />
         </div>
         <div class="flex items-center min-w-max relative">
           <AtomsLinkBtn href="#" variant="primary"> Explore more </AtomsLinkBtn>
@@ -41,7 +41,7 @@
               title="How to hack a website with Html in simple way"
               duration="23min"
               href="#"
-              cover-image="/images/sidebiew.webp"
+              cover-image="/images/cpanel.png"
             />
           </div>
 
@@ -52,7 +52,7 @@
               title="5 Principales you must know for writting clear code"
               duration="1h:22min"
               href="#"
-              cover-image="/images/podCast.webp"
+              cover-image="/images/gitlab.png"
             />
           </div>
 
@@ -63,7 +63,28 @@
               title="Make you website request secure than you could mind"
               duration="12min"
               href="#"
-              cover-image="/images/sidebiew.webp"
+              cover-image="/images/github.png"
+            />
+          </div>
+
+          <div
+            class="w-11/12 min-w-[91.666667%] xs:w-80 xs:min-w-[20rem] md:w-1/3 md:min-w-[33.333333%] lg:w-1/4 lg:min-w-[25%]"
+          >
+            <CardsRecentPod
+              title="Make you website request secure than you could mind"
+              duration="12min"
+              href="#"
+              cover-image="/images/ubuntu_server.png"
+            />
+          </div>
+          <div
+            class="w-11/12 min-w-[91.666667%] xs:w-80 xs:min-w-[20rem] md:w-1/3 md:min-w-[33.333333%] lg:w-1/4 lg:min-w-[25%]"
+          >
+            <CardsRecentPod
+              title="Make you website request secure than you could mind"
+              duration="12min"
+              href="#"
+              cover-image="/images/docker.jpeg"
             />
           </div>
 
@@ -74,7 +95,7 @@
               title="How to get started with desktop developpement"
               duration="50min"
               href="#"
-              cover-image="/images/sidebiew.webp"
+              cover-image="/images/team.jpg"
             />
           </div>
         </div>
