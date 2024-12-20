@@ -45,11 +45,11 @@ const navLinks = [
           <ul
             class="text-gray-700 dark:text-gray-100 w-full flex lg:items-center gap-y-4 lg:gap-x-8 flex-col lg:flex-row"
           >
-            <AtomsNavLink
+            <!-- <AtomsNavLink
               v-for="navItem in navLinks"
               :href="navItem.href"
               :text="navItem.text"
-            />
+            /> -->
           </ul>
         </div>
 
@@ -57,11 +57,11 @@ const navLinks = [
           <ElementsThemeSwitcher />
           <ElementsLangSwitcher />
           <div class="hidden lg:flex lg:items-center gap-4">
-            <AtomsLinkBtn href="#" variant="secondary"> Signin </AtomsLinkBtn>
+            <!-- <AtomsLinkBtn href="#" variant="secondary"> Signin </AtomsLinkBtn> -->
             <!-- <AtomsLinkBtn href="#" variant="primary"> Join Us </AtomsLinkBtn> -->
           </div>
 
-          <div class="flex lg:hidden items-center">
+          <!-- <div class="flex lg:hidden items-center">
             <ElementsDropDown>
               <template #trigger>
                 <button
@@ -99,9 +99,9 @@ const navLinks = [
                 </ul>
               </template>
             </ElementsDropDown>
-          </div>
+          </div> -->
 
-          <div class="flex lg:hidden border-l border-box-border pl-2">
+          <!-- <div class="flex lg:hidden border-l border-box-border pl-2">
             <button
               @click="toggleNav"
               class="outline-none w-7 h-auto flex flex-col relative"
@@ -127,7 +127,7 @@ const navLinks = [
                 "
               ></span>
             </button>
-          </div>
+          </div> -->
         </div>
       </nav>
     </AtomsContainer>

@@ -16,7 +16,7 @@
     <AtomsContainer class-name="relative">
       <div class="flex justify-between pb-6 relative">
         <div class="">
-          <AtomsTitle texte="Popular podcast" />
+          <AtomsTitle :texte="$t('experienced_with_project')" />
         </div>
         <div class="flex items-center min-w-max gap-5">
           <AtomsLinkBtn href="#" variant="primary"> See all </AtomsLinkBtn>
@@ -26,9 +26,9 @@
         class="grid grid-cols-2 items-stretch sm:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-10 sm:gap-x-5 sm:gap-y-8"
       >
         <CardsPodCast
-          title="Start your journey in SEO"
+          :title="$t('multiple_country_workers_management')"
           href="#"
-          duration="24min"
+          :duration="$t('two_years')"
           cover-image="/images/project_vip.png"
           category=""
           created-at=""
@@ -36,9 +36,9 @@
         />
 
         <CardsPodCast
-          title="Start your journey in SEO"
+          :title="$t('workers_management_system')"
           href="#"
-          duration="24min"
+          :duration="$t('one_years')"
           cover-image="/images/mhachak.png"
           category=""
           created-at=""
@@ -46,9 +46,9 @@
         />
 
         <CardsPodCast
-          title="Start your journey in SEO"
+          :title="$t('hotel_management_own')"
           href="#"
-          duration="24min"
+          :duration="$t('whole_handle')"
           cover-image="/images/hotel.png"
           category=""
           created-at=""
@@ -56,9 +56,9 @@
         />
 
         <CardsPodCast
-          title="Start your journey in SEO"
+          :title="$t('pos_management_system')"
           href="#"
-          duration="24min"
+          :duration="$t('two_months')"
           cover-image="/images/pos_management.png"
           category=""
           created-at=""

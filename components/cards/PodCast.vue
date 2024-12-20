@@ -1,21 +1,32 @@
 <template>
+  <div
+    class="lg:p-1 relative h-auto flex flex-col lg:rounded-2xl lg:bg-box-bg lg:shadow-lg lg:shadow-box-shadow lg:border lg:border-box-border"
+  >
+    <div class="relative h-max min-h-max">
+      <nuxt-img
+        :src="coverImage"
+        alt="Cover image"
+        width="280"
+        class="w-full h-32 sm:h-36 md:h-40 lg:h-48 rounded-xl object-cover"
+      />
+      <span
+        class="absolute top-2 right-2 px-2 rounded-full text-sm text-white bg-primary"
+      >
+        {{ duration }}
+      </span>
+    </div>
     <div
-        class="lg:p-1 relative h-auto flex flex-col lg:rounded-2xl lg:bg-box-bg lg:shadow-lg lg:shadow-box-shadow lg:border lg:border-box-border">
-        <div class="relative h-max min-h-max">
-            <nuxt-img :src="coverImage" alt="Cover image" width="280"
-                class="w-full h-32 sm:h-36 md:h-40 lg:h-48 rounded-xl object-cover"/>
-                <span class="absolute top-2 right-2 px-2 rounded-full text-sm text-white bg-primary">
-            {{ duration }}
-        </span>
-        </div>
-        <div class="lg:px-2 pt-2 lg:pb-4 xl:px-4 md:pt-4  h-full flex flex-col justify-between">
-            <div class="h-full">
-                <h2 class="font-semibold text-base md:text-lg lg:text-xl line-clamp-2 md:line-clamp-3 text-gray-700 dark:text-white">
-                    {{ title }}
-                </h2>
-            </div>
-            <div class="pt-3 sm:pt-5 min-h-max h-max">
-                <NuxtLink :to="href"
+      class="lg:px-2 pt-2 lg:pb-4 xl:px-4 md:pt-4 h-full flex flex-col justify-between"
+    >
+      <div class="h-full">
+        <h2
+          class="font-semibold text-base md:text-lg lg:text-xl line-clamp-2 md:line-clamp-3 text-gray-700 dark:text-white"
+        >
+          {{ title }}
+        </h2>
+      </div>
+      <div class="pt-3 sm:pt-5 min-h-max h-max">
+        <!-- <NuxtLink :to="href"
                     class="flex relative group items-center text-white px-5 py-2 bg-primary gap-1 text-sm w-max rounded-full">
                     <span class="absolute inset-0 rounded-full group-hover:scale-105 origin-center transition-all ease-in-out bg-primary">
 
@@ -29,19 +40,27 @@
                         </svg>
                     Play now
                     </span>
-                </NuxtLink>
-            </div>
-        </div>
+                </NuxtLink> -->
+      </div>
     </div>
+  </div>
 </template>
 <script lang="ts" setup>
-const { title, href, duration, coverImage, category, createdAt, description } = defineProps<{
-    title: string,
-    href: string,
-    duration: string,
-    coverImage: string,
-    category: string,
-    createdAt: string,
-    description: string
-}>()
+const {
+  title,
+  href,
+  duration,
+  coverImage,
+  category,
+  createdAt,
+  description,
+} = defineProps<{
+  title: string;
+  href: string;
+  duration: string;
+  coverImage: string;
+  category: string;
+  createdAt: string;
+  description: string;
+}>();
 </script>

@@ -26,9 +26,10 @@
           <div class="relative">
             <AtomsTitle texte="We Share what we love the most with Tech Community" />
             <p class="text-gray-600 dark:text-gray-300 pt-8">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias labore quas
-              natus? Repudiandae tempora autem corporis voluptatem ipsam voluptatibus
-              culpa, cum a inventore animi suscipit odit dolorem. Omnis, dolore aperiam.
+              At IDG Technology Solutions, we are passionate about sharing knowledge and
+              innovation with the tech community. From insightful podcasts and engaging
+              discussions to resources that empower tech enthusiasts, we strive to create
+              a space where ideas flourish and technology thrives.
             </p>
             <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
               <div
@@ -49,10 +50,10 @@
                 <h3
                   class="text-gray-800 dark:text-white font-bold text-xl sm:text-2xl lg:text-3xl"
                 >
-                  + 500
+                  + 4
                 </h3>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                  Lovely Listerners
+                  Year Graduated
                 </p>
               </div>
               <div
@@ -61,7 +62,7 @@
                 <h3
                   class="text-gray-800 dark:text-white font-bold text-xl sm:text-2xl lg:text-3xl"
                 >
-                  + 5
+                  + 2
                 </h3>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                   Years Experience

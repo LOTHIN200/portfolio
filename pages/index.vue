@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: "intro",
+  layout: "default",
 });
 useHead({
   title: "DEV",
@@ -11,11 +11,10 @@ useHead({
 <template>
   <div>
     <AppHeader />
-    <AppParticle />
     <SectionsHomeHeroSection />
-    <!-- <SectionsHomeLatestPodcast /> -->
     <SectionsHomePopularPodcasts />
     <SectionsAboutPodux />
+    <SectionsHomeLatestPodcast />
     <SectionsWhyUs />
     <SectionsCallToAction />
     <AppFooter />
