@@ -35,67 +35,15 @@
           class="flex items-stretch gap-5 overflow-hidden overflow-x-auto invisible-scroll"
         >
           <div
+            v-for="(card, index) in cards"
+            :key="index"
             class="w-11/12 min-w-[91.666667%] xs:w-80 xs:min-w-[20rem] md:w-1/3 md:min-w-[33.333333%] lg:w-1/4 lg:min-w-[25%]"
           >
             <CardsRecentPod
-              title="How to hack a website with Html in simple way"
-              duration="23min"
-              href="#"
-              cover-image="/images/cpanel.png"
-            />
-          </div>
-
-          <div
-            class="w-11/12 min-w-[91.666667%] xs:w-80 xs:min-w-[20rem] md:w-1/3 md:min-w-[33.333333%] lg:w-1/4 lg:min-w-[25%]"
-          >
-            <CardsRecentPod
-              title="5 Principales you must know for writting clear code"
-              duration="1h:22min"
-              href="#"
-              cover-image="/images/gitlab.png"
-            />
-          </div>
-
-          <div
-            class="w-11/12 min-w-[91.666667%] xs:w-80 xs:min-w-[20rem] md:w-1/3 md:min-w-[33.333333%] lg:w-1/4 lg:min-w-[25%]"
-          >
-            <CardsRecentPod
-              title="Make you website request secure than you could mind"
-              duration="12min"
-              href="#"
-              cover-image="/images/github.png"
-            />
-          </div>
-
-          <div
-            class="w-11/12 min-w-[91.666667%] xs:w-80 xs:min-w-[20rem] md:w-1/3 md:min-w-[33.333333%] lg:w-1/4 lg:min-w-[25%]"
-          >
-            <CardsRecentPod
-              title="Make you website request secure than you could mind"
-              duration="12min"
-              href="#"
-              cover-image="/images/ubuntu_server.png"
-            />
-          </div>
-          <div
-            class="w-11/12 min-w-[91.666667%] xs:w-80 xs:min-w-[20rem] md:w-1/3 md:min-w-[33.333333%] lg:w-1/4 lg:min-w-[25%]"
-          >
-            <CardsRecentPod
-              title="Make you website request secure than you could mind"
-              duration="12min"
-              href="#"
-              cover-image="/images/docker.jpeg"
-            />
-          </div>
-
-          <div
-            class="w-11/12 min-w-[91.666667%] xs:w-80 xs:min-w-[20rem] md:w-1/3 md:min-w-[33.333333%] lg:w-1/4 lg:min-w-[25%]"
-          >
-            <CardsRecentPod
-              title="How to get started with desktop developpement"
-              duration="50min"
-              href="#"
-              cover-image="/images/team.jpg"
+              :title="card.title"
+              :duration="card.duration"
+              :href="card.href"
+              :cover-image="card.coverImage"
             />
           </div>
         </div>
@@ -105,6 +53,44 @@
 </template>
 
 <script lang="ts" setup>
+const cards = [
+  {
+    title: "How to hack a website with Html in simple way",
+    duration: "23min",
+    href: "#",
+    coverImage: "/images/cpanel.png",
+  },
+  {
+    title: "5 Principles you must know for writing clear code",
+    duration: "1h:22min",
+    href: "#",
+    coverImage: "/images/gitlab.png",
+  },
+  {
+    title: "Make your website requests secure than you could imagine",
+    duration: "12min",
+    href: "#",
+    coverImage: "/images/github.png",
+  },
+  {
+    title: "Make your website requests secure than you could imagine",
+    duration: "12min",
+    href: "#",
+    coverImage: "/images/ubuntu_server.png",
+  },
+  {
+    title: "Make your website requests secure than you could imagine",
+    duration: "12min",
+    href: "#",
+    coverImage: "/images/docker.jpeg",
+  },
+  {
+    title: "How to get started with desktop development",
+    duration: "50min",
+    href: "#",
+    coverImage: "/images/team.jpg",
+  },
+];
 // const scrollLeft = useState('scrollLeft', ()=> 0)
 const nextIsVisible = useState("nextIsVisible", () => false);
 const prevIsVisible = useState("prevIsVisible", () => false);
