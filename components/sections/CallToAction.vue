@@ -36,11 +36,17 @@
             architecto ullam earum
           </p>
           <div class="mx-auto max-w-md sm:max-w-xl pt-10">
-            <form @submit.prevent="sendEmail" class="flex items-center relative gap-x-2">
+            <form @submit.prevent="sendEmail" class="items-center relative gap-x-2">
+              <textarea
+                v-model="body"
+                type="text"
+                placeholder="details"
+                class="outline-none border-2 border-transparent focus:border-primary bg-body text-gray-600 dark:text-gray-200 rounded-3xl px-6 py-3 w-full"
+              />
               <input
                 v-model="email"
                 type="email"
-                placeholder="johndoe@gmail.com"
+                placeholder="youremial@gmail.com"
                 class="outline-none border-2 border-transparent focus:border-primary bg-body text-gray-600 dark:text-gray-200 rounded-3xl px-6 py-3 w-full"
               />
               <div
@@ -85,32 +91,32 @@
 
 <script setup>
 import { ref } from "vue";
-
+const body = ref("");
 const email = ref("");
 const error = ref("");
 const success = ref("");
 
 const sendEmail = async () => {
-  //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  //   if (!emailRegex.test(email.value)) {
-  //     error.value = "Please enter a valid email address.";
-  //     success.value = "";
-  //     return;
-  //   }
-  //   try {
-  //     const response = await $fetch("/api/send-email", {
-  //       method: "POST",
-  //       body: { email: email.value },
-  //     });
-  //     if (response.success) {
-  //       success.value = "Email sent successfully!";
-  //       error.value = "";
-  //     } else {
-  //       throw new Error(response.message || "Failed to send email.");
-  //     }
-  //   } catch (err) {
-  //     error.value = err.message;
-  //     success.value = "";
-  //   }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email.value)) {
+    error.value = "Please enter a valid email address.";
+    success.value = "";
+    return;
+  }
+  try {
+    const response = await $fetch("/api/send-email", {
+      method: "POST",
+      body: { email: email.value },
+    });
+    if (response.success) {
+      success.value = "Email sent successfully!";
+      error.value = "";
+    } else {
+      throw new Error(response.message || "Failed to send email.");
+    }
+  } catch (err) {
+    error.value = err.message;
+    success.value = "";
+  }
 };
 </script>
