@@ -7,7 +7,7 @@
             class="w-full md:h-full rounded-3xl bg-white dark:bg-body shadow-lg shadow-box-shadow border border-box-border"
           >
             <img
-              src="/images/team.jpg"
+              src="/images/lothin_team.jpg"
               alt="Illustratuin about"
               width="500"
               class="w-full h-full object-cover rounded-2xl"
@@ -26,10 +26,7 @@
           <div class="relative">
             <AtomsTitle texte="We Share what we love the most with Tech Community" />
             <p class="text-gray-600 dark:text-gray-300 pt-8">
-              At IDG Technology Solutions, we are passionate about sharing knowledge and
-              innovation with the tech community. From insightful podcasts and engaging
-              discussions to resources that empower tech enthusiasts, we strive to create
-              a space where ideas flourish and technology thrives.
+              {{$t('passion_description')}}
             </p>
             <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
               <div

@@ -61,12 +61,15 @@
           <div
             class="w-full h-[27rem] sm:h-[30rem] md:h-full flex justify-start md:justify-end relative pb-5"
           >
-            <img
-              src="/images/lothin.jpg"
-              alt="Podcast image"
-              width="300"
+            <video
               class="w-2/5 aspect-square absolute bottom-0 right-0 md:left-0 object-cover rounded-t-[30%] rounded-b-[30%] border-4 border-box-border shadow-md shadow-box-shadow"
-            />
+              autoplay
+              loop
+              muted
+              playsinline
+            >
+              <source src="/videos/certificate_day.MOV" type="video/mp4" />
+            </video>
             <img
               src="/images/team.jpg"
               alt="Illustratuin about"

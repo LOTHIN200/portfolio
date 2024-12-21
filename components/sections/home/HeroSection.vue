@@ -128,7 +128,7 @@
               class="absolute w-2/4 h-full z-10 p-1 -translate-y-1/2 top-1/2 right-3 rounded-3xl bg-white dark:bg-body shadow-lg shadow-box-shadow border border-box-border"
             >
               <img
-                src="/images/chushin.jpg"
+                src="/images/lothin.jpg"
                 alt="In studio"
                 width="400"
                 height="auto"
