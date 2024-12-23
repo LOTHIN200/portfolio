@@ -43,24 +43,36 @@
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- Large Modal -->
   <div
     v-if="isModalOpen"
     class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
     @click.self="closeModal"
   >
-    <div class="relative bg-white rounded-lg overflow-hidden max-w-lg w-full p-4">
-      <button class="absolute top-2 right-2 text-white text-xl" @click="closeModal">
+    <div
+      class="relative bg-white rounded-lg overflow-hidden max-w-5xl w-full p-6"
+      style="height: 80vh"
+    >
+      <button class="absolute top-4 right-4 text-black text-2xl" @click="closeModal">
         &times;
       </button>
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col lg:flex-row items-center lg:items-start">
+        <!-- Image Section -->
         <nuxt-img
           :src="coverImage"
           alt="Modal Image"
-          class="rounded-xl max-w-full max-h-[60vh] object-cover"
+          class="rounded-xl max-w-full lg:max-w-[50%] max-h-[70vh] object-cover border shadow-lg"
         />
-        <h3 class="mt-4 text-lg font-semibold text-center">{{ title }}</h3>
-        <p class="mt-2 text-gray-700">{{ $t("details") }} for {{ title }}.</p>
+        <div class="mt-6 lg:mt-0 lg:ml-2 flex flex-col flex-1 text-gray-700 text-md">
+          <p class="text-1xl gap-4">{{ $t(title) }}</p>
+          <ul
+            class="mt-4 text-gray-700 text-lg leading-relaxed list-disc list-inside overflow-y-auto max-h-[60vh]"
+          >
+            <li v-for="(item, index) in description" :key="index">
+              {{ $t(item) }}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -69,8 +81,9 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 
-const { title, href, duration, coverImage } = defineProps<{
+const { title, description, href, duration, coverImage } = defineProps<{
   title: string;
+  description: string[];
   href: string;
   duration: string;
   coverImage: string;

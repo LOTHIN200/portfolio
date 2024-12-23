@@ -40,7 +40,8 @@
             class="w-11/12 min-w-[91.666667%] xs:w-80 xs:min-w-[20rem] md:w-1/3 md:min-w-[33.333333%] lg:w-1/4 lg:min-w-[25%]"
           >
             <CardsRecentPod
-              :title="card.title"
+              :title="$t(card.title)"
+              :description="card.description"
               :duration="card.duration"
               :href="card.href"
               :cover-image="card.coverImage"
@@ -55,43 +56,99 @@
 <script lang="ts" setup>
 const cards = [
   {
-    title: "How to hack a website with Html in simple way",
-    duration: "23min",
+    title: "cpanelActionsList",
+    duration: "23 min",
     href: "#",
     coverImage: "/images/cpanel.png",
+    description: [
+      "manage_files",
+      "create_manage_email",
+      "add_manage_domains",
+      "configure_dns_records",
+      "manage_databases",
+      "install_apps",
+      "setup_backups",
+      "manage_ssl_tls",
+      "view_stats_error_logs",
+      "configure_ftp_accounts",
+      "setup_cron_jobs",
+      "block_ip_hotlink_protection",
+      "optimize_website",
+      "edit_htaccess",
+      "manage_git_repositories",
+      "manage_api_tokens",
+    ],
   },
   {
-    title: "5 Principles you must know for writing clear code",
-    duration: "1h:22min",
+    title: "gitlab",
+    duration: "1 h 22 min",
     href: "#",
     coverImage: "/images/gitlab.png",
+    description: [
+      "version_control",
+      "cicd_pipelines",
+      "issue_tracking",
+      "code_review",
+      "security_and_monitoring",
+      "collaboration_tools",
+    ],
   },
   {
-    title: "Make your website requests secure than you could imagine",
-    duration: "12min",
+    title: "github",
+    duration: "12 min",
     href: "#",
     coverImage: "/images/github.png",
+    description: [
+      "version_control",
+      "repositories",
+      "collaboration",
+      "community",
+      "documentation",
+      "ci_cd_integration",
+      "security",
+    ],
   },
   {
-    title: "Make your website requests secure than you could imagine",
-    duration: "12min",
+    title: "ubuntu_server",
+    duration: "12 min",
     href: "#",
     coverImage: "/images/ubuntu_server.png",
+    description: [
+      "open_source",
+      "stability",
+      "ubuntu_security",
+      "performance",
+      "compatibility",
+    ],
   },
   {
-    title: "Make your website requests secure than you could imagine",
-    duration: "12min",
+    title: "docker",
+    duration: "12 min",
     href: "#",
     coverImage: "/images/docker.jpeg",
+    description: [
+      "dockercontainers",
+      "dockerimages",
+      "dockerengine",
+      "dockerhub",
+      "dockerfile",
+      "dockercompose",
+    ],
   },
   {
-    title: "How to get started with desktop development",
-    duration: "50min",
+    title: "How to Get Started with Desktop Development",
+    duration: "50 min",
     href: "#",
     coverImage: "/images/team.jpg",
+    description: [
+      "An introductory guide to desktop development.",
+      "Explore tools, languages, and frameworks.",
+      "Start building desktop applications effectively.",
+    ],
   },
 ];
-// const scrollLeft = useState('scrollLeft', ()=> 0)
+
+const scrollLeft = useState("scrollLeft", () => 0);
 const nextIsVisible = useState("nextIsVisible", () => false);
 const prevIsVisible = useState("prevIsVisible", () => false);
 
