@@ -120,6 +120,11 @@ const sendEmail = async () => {
     body: email.value,
   });
   if (data.value && data.value.success) {
+    email.value = {
+      to: "",
+      subject: "",
+      text: "",
+    };
     successMessage();
   } else {
     failMessage();
