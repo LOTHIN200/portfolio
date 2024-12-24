@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     "nuxt-particles",
     "@nuxtjs/i18n",
     "@pinia/nuxt",
+    "nuxt-nodemailer",
   ],
   i18n: {
     locales: [

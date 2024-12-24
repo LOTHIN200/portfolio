@@ -37,18 +37,29 @@
           </p>
           <div class="mx-auto max-w-md sm:max-w-xl pt-10">
             <form @submit.prevent="sendEmail" class="items-center relative gap-x-2">
-              <textarea
-                v-model="body"
-                type="text"
-                placeholder="details"
-                class="outline-none border-2 border-transparent focus:border-primary bg-body text-gray-600 dark:text-gray-200 rounded-3xl px-6 py-3 w-full"
-              />
               <input
-                v-model="email"
+                v-model="email.to"
                 type="email"
                 placeholder="youremial@gmail.com"
                 class="outline-none border-2 border-transparent focus:border-primary bg-body text-gray-600 dark:text-gray-200 rounded-3xl px-6 py-3 w-full"
               />
+              <div class="mt-4">
+                <input
+                  v-model="email.subject"
+                  type="text"
+                  placeholder="subject"
+                  class="outline-none border-2 border-transparent focus:border-primary bg-body text-gray-600 dark:text-gray-200 rounded-3xl px-6 py-3 w-full"
+                />
+              </div>
+
+              <div class="mt-4">
+                <textarea
+                  v-model="email.text"
+                  type="text"
+                  placeholder="details"
+                  class="outline-none border-2 border-transparent focus:border-primary bg-body text-gray-600 dark:text-gray-200 rounded-3xl px-6 py-6 w-full"
+                />
+              </div>
               <div
                 class="sm:inline-flex sm:min-w-max absolute sm:relative top-0.5 right-0.5 sm:top-0 sm:right-0"
               >
@@ -91,32 +102,48 @@
 
 <script setup>
 import { ref } from "vue";
-const body = ref("");
-const email = ref("");
+const email = ref({
+  to: "",
+  subject: "",
+  text: "",
+});
 const error = ref("");
 const success = ref("");
-
+const response = ref(null);
 const sendEmail = async () => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email.value)) {
-    error.value = "Please enter a valid email address.";
-    success.value = "";
-    return;
-  }
   try {
-    const response = await $fetch("/api/send-email", {
+    const { data } = await useFetch("/api/send-email", {
       method: "POST",
-      body: { email: email.value },
+      body: email.value,
     });
-    if (response.success) {
-      success.value = "Email sent successfully!";
-      error.value = "";
-    } else {
-      throw new Error(response.message || "Failed to send email.");
-    }
+    response.value = data.success
+      ? "Email sent successfully!"
+      : `Failed to send email: ${data.error}`;
   } catch (err) {
-    error.value = err.message;
-    success.value = "";
+    response.value = `Error: ${err.message}`;
   }
 };
+// const sendEmail = async () => {
+//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//   if (!emailRegex.test(email.value)) {
+//     error.value = "Please enter a valid email address.";
+//     success.value = "";
+//     return;
+//   }
+//   try {
+//     const response = await $fetch("/api/send-email", {
+//       method: "POST",
+//       body: { email: email.value },
+//     });
+//     if (response.success) {
+//       success.value = "Email sent successfully!";
+//       error.value = "";
+//     } else {
+//       throw new Error(response.message || "Failed to send email.");
+//     }
+//   } catch (err) {
+//     error.value = err.message;
+//     success.value = "";
+//   }
+// };
 </script>

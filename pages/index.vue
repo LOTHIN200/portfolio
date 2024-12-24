@@ -16,7 +16,7 @@ useHead({
     <SectionsAboutPodux />
     <SectionsHomeLatestPodcast />
     <SectionsWhyUs />
-    <!-- <SectionsCallToAction /> -->
+    <SectionsCallToAction />
     <AppFooter />
   </div>
 </template>
