@@ -91,8 +91,6 @@
                 </button>
               </div>
             </form>
-            <p v-if="error" class="text-red-500 mt-2">{{ error }}</p>
-            <p v-if="success" class="text-green-500 mt-2">{{ success }}</p>
           </div>
         </div>
       </div>
@@ -107,43 +105,15 @@ const email = ref({
   subject: "",
   text: "",
 });
-const error = ref("");
-const success = ref("");
-const response = ref(null);
 const sendEmail = async () => {
-  try {
-    const { data } = await useFetch("/api/send-email", {
-      method: "POST",
-      body: email.value,
-    });
-    response.value = data.success
-      ? "Email sent successfully!"
-      : `Failed to send email: ${data.error}`;
-  } catch (err) {
-    response.value = `Error: ${err.message}`;
+  const { data } = await useFetch("/api/send-email", {
+    method: "POST",
+    body: email.value,
+  });
+  if (data.value && data.value.success) {
+    console.log("Email sent successfully!");
+  } else {
+    console.error("Failed to send email:", data.value?.info || "Unknown error");
   }
 };
-// const sendEmail = async () => {
-//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//   if (!emailRegex.test(email.value)) {
-//     error.value = "Please enter a valid email address.";
-//     success.value = "";
-//     return;
-//   }
-//   try {
-//     const response = await $fetch("/api/send-email", {
-//       method: "POST",
-//       body: { email: email.value },
-//     });
-//     if (response.success) {
-//       success.value = "Email sent successfully!";
-//       error.value = "";
-//     } else {
-//       throw new Error(response.message || "Failed to send email.");
-//     }
-//   } catch (err) {
-//     error.value = err.message;
-//     success.value = "";
-//   }
-// };
 </script>
