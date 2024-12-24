@@ -99,6 +99,7 @@
 </template>
 
 <script setup>
+const { t } = useI18n();
 import { ref } from "vue";
 const email = ref({
   to: "",
@@ -107,11 +108,11 @@ const email = ref({
 });
 const successMessage = () => {
   const { $toast } = useNuxtApp();
-  $toast.success("gmail_successfully_sent");
+  $toast.success(t("gmail_successfully_sent"));
 };
 const failMessage = () => {
   const { $toast } = useNuxtApp();
-  $toast.error("gmail_successfully_sent");
+  $toast.error(t("gmail_not_successfully_sent"));
 };
 const sendEmail = async () => {
   const { data } = await useFetch("/api/send-email", {
