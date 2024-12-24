@@ -24,30 +24,31 @@
           <h2
             class="text-gray-800 pt-4 dark:text-white font-bold text-4xl md:text-5xl lg:text-6x"
           >
-            New Episodes will
+            Need Assistance or Have Questions?
             <span
               class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-[#8cd66a]"
-              >always</span
+              >Contact us</span
             >
-            updated regularly
+            through email!
           </h2>
           <p class="text-gray-600 dark:text-gray-300 pt-8 mx-auto max-w-xl">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente delectus
-            architecto ullam earum
+            Whether you need help or want to provide feedback, we're here to listen. Reach
+            out to us by sending an email, and we'll get back to you as soon as possible.
           </p>
           <div class="mx-auto max-w-md sm:max-w-xl pt-10">
             <form @submit.prevent="sendEmail" class="items-center relative gap-x-2">
-              <input
+              <!-- <input
                 v-model="email.to"
+                disabled
                 type="email"
                 placeholder="youremial@gmail.com"
                 class="outline-none border-2 border-transparent focus:border-primary bg-body text-gray-600 dark:text-gray-200 rounded-3xl px-6 py-3 w-full"
-              />
+              /> -->
               <div class="mt-4">
                 <input
                   v-model="email.subject"
                   type="text"
-                  placeholder="subject"
+                  :placeholder="$t('title')"
                   class="outline-none border-2 border-transparent focus:border-primary bg-body text-gray-600 dark:text-gray-200 rounded-3xl px-6 py-3 w-full"
                 />
               </div>
@@ -56,7 +57,7 @@
                 <textarea
                   v-model="email.text"
                   type="text"
-                  placeholder="details"
+                  :placeholder="$t('your_opinion')"
                   class="outline-none border-2 border-transparent focus:border-primary bg-body text-gray-600 dark:text-gray-200 rounded-3xl px-6 py-6 w-full"
                 />
               </div>
@@ -101,27 +102,55 @@
 <script setup>
 const { t } = useI18n();
 import { ref } from "vue";
+
 const email = ref({
-  to: "",
+  to: "lothininfo@gmail.com",
   subject: "",
   text: "",
 });
+
 const successMessage = () => {
   const { $toast } = useNuxtApp();
   $toast.success(t("gmail_successfully_sent"));
 };
+
 const failMessage = () => {
   const { $toast } = useNuxtApp();
   $toast.error(t("gmail_not_successfully_sent"));
 };
+
+const fieldRequiredMessage = (field) => {
+  const { $toast } = useNuxtApp();
+  $toast.warning(t(`${field}_is_required`));
+};
+
+const validateFields = () => {
+  if (!email.value.to) {
+    fieldRequiredMessage("to");
+    return false;
+  }
+  if (!email.value.subject) {
+    fieldRequiredMessage("subject");
+    return false;
+  }
+  if (!email.value.text) {
+    fieldRequiredMessage("text");
+    return false;
+  }
+  return true;
+};
+
 const sendEmail = async () => {
+  if (!validateFields()) return;
+
   const { data } = await useFetch("/api/send-email", {
     method: "POST",
     body: email.value,
   });
+
   if (data.value && data.value.success) {
     email.value = {
-      to: "",
+      to: "lothininfo@gmail.com",
       subject: "",
       text: "",
     };

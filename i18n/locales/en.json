@@ -69,5 +69,9 @@
   "dockerfile": "A Dockerfile is a text file that contains instructions on how to build a Docker image. It defines the application's environment, including installation steps, environment variables, and commands for setting up the container.",
   "dockercompose": "Docker Compose is a tool that allows you to define and manage multi-container Docker applications. It uses a configuration file (docker-compose.yml) to define the services, networks, and volumes needed for your application. With Docker Compose, you can start all the services defined in the file with a single command, making it easier to work with complex applications that require multiple containers.",
   "gmail_successfully_sent": "Gmail Sucessfully Sent",
-  "gmail_not_successfully_sent": "Gmail Not Sucessfully Sent"
+  "gmail_not_successfully_sent": "Gmail Not Sucessfully Sent",
+  "subject_is_required": "Title Is Required!",
+  "text_is_required": "Your Opinions are Required!",
+  "title": "Title",
+  "your_opinion": "You Opinions"
 }
