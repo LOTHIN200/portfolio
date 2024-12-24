@@ -105,15 +105,23 @@ const email = ref({
   subject: "",
   text: "",
 });
+const successMessage = () => {
+  const { $toast } = useNuxtApp();
+  $toast.info("toastify success");
+};
+const failMessage = () => {
+  const { $toast } = useNuxtApp();
+  $toast.info("toastify failure");
+};
 const sendEmail = async () => {
   const { data } = await useFetch("/api/send-email", {
     method: "POST",
     body: email.value,
   });
   if (data.value && data.value.success) {
-    console.log("Email sent successfully!");
+    successMessage();
   } else {
-    console.error("Failed to send email:", data.value?.info || "Unknown error");
+    failMessage();
   }
 };
 </script>
