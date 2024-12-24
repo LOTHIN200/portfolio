@@ -107,11 +107,11 @@ const email = ref({
 });
 const successMessage = () => {
   const { $toast } = useNuxtApp();
-  $toast.info("toastify success");
+  $toast.success("gmail_successfully_sent");
 };
 const failMessage = () => {
   const { $toast } = useNuxtApp();
-  $toast.info("toastify failure");
+  $toast.error("gmail_successfully_sent");
 };
 const sendEmail = async () => {
   const { data } = await useFetch("/api/send-email", {
