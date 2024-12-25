@@ -6,14 +6,14 @@ export default defineEventHandler(async (event) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "lothin9999@gmail.com", //process.env.GMAIL_USER,
-      pass: "kjfc mtqa annp ldhc", //process.env.GMAIL_PASS,
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS,
     },
   });
 
   const mailOptions = {
-    from: "lothin9999@gmail.com", //process.env.GMAIL_USER,
-    to: "lothininfo@gmail.com", //body.to,
+    from: process.env.GMAIL_USER,
+    to: process.env.GMAIL_SENDTO,
     subject: body.subject,
     text: body.text,
     html: body.html,
