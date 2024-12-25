@@ -46,6 +46,7 @@ export default defineNuxtConfig({
     public: {
       telegramUsername: process.env.TELEGRAM_USERNAME || "",
       linkedinUsername: process.env.LINKEDIN_USERNAME || "",
+      facebookUsername: process.env.FACEBOOK_USERNAME || "",
     },
   },
   css: ["~/assets/css/app.css"],

@@ -58,23 +58,24 @@ const navLinks = [
         <div class="flex items-center bg-inherit gap-1 lg:gap-3 min-w-max">
           <ElementsThemeSwitcher />
           <ElementsLangSwitcher />
+          <ElementsContactSwitcher />
           <div class="hidden lg:flex lg:items-center gap-4">
-            <AtomsLinkBtn
+            <!-- <AtomsLinkBtn
               :href="telegramLink"
               target="_blank"
               rel="noopener noreferrer"
               variant="secondary"
             >
               {{ $t("telegram") }}
-            </AtomsLinkBtn>
-            <AtomsLinkBtn
+            </AtomsLinkBtn> -->
+            <!-- <AtomsLinkBtn
               :href="linkedinLink"
               variant="primary"
               target="_blank"
               rel="noopener noreferrer"
             >
               {{ $t("linkin") }}
-            </AtomsLinkBtn>
+            </AtomsLinkBtn> -->
           </div>
 
           <div class="flex lg:hidden items-center">

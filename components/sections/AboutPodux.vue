@@ -67,7 +67,7 @@
               </div>
             </div>
             <div class="pt-10 flex">
-              <AtomsLinkBtn @click="downloadFile" variant="primary">
+              <AtomsLinkBtn href="#" @click="downloadFile" variant="primary">
                 {{ $t("cv") }}
               </AtomsLinkBtn>
             </div>
