@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 const navIsOpen = useState("navIsOpen", () => false);
-
+const config = useRuntimeConfig();
+const telegramLink = `https://t.me/${config.public.telegramUsername}`;
+const linkedinLink = `https://www.linkedin.com/in/${config.public.linkedinUsername}`;
 function toggleNav(event: MouseEvent): void {
   event.preventDefault();
   navIsOpen.value = !navIsOpen.value;
@@ -57,11 +59,25 @@ const navLinks = [
           <ElementsThemeSwitcher />
           <ElementsLangSwitcher />
           <div class="hidden lg:flex lg:items-center gap-4">
-            <!-- <AtomsLinkBtn href="#" variant="secondary"> Signin </AtomsLinkBtn> -->
-            <!-- <AtomsLinkBtn href="#" variant="primary"> Join Us </AtomsLinkBtn> -->
+            <AtomsLinkBtn
+              :href="telegramLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="secondary"
+            >
+              {{ $t("telegram") }}
+            </AtomsLinkBtn>
+            <AtomsLinkBtn
+              :href="linkedinLink"
+              variant="primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ $t("linkin") }}
+            </AtomsLinkBtn>
           </div>
 
-          <!-- <div class="flex lg:hidden items-center">
+          <div class="flex lg:hidden items-center">
             <ElementsDropDown>
               <template #trigger>
                 <button
@@ -88,18 +104,30 @@ const navLinks = [
                   <li
                     class="flex select-none cursor-pointer items-center gap-3 px-2 py-2 rounded-md transition hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-200"
                   >
-                    <NuxtLink to="#"> Join-us </NuxtLink>
+                    <NuxtLink
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      :to="telegramLink"
+                    >
+                      {{ $t("telegram") }}
+                    </NuxtLink>
                   </li>
 
                   <li
                     class="flex select-none cursor-pointer items-center gap-3 px-2 py-2 rounded-md transition hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-200"
                   >
-                    <NuxtLink to="#"> Signin </NuxtLink>
+                    <NuxtLink
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      :to="linkedinLink"
+                    >
+                      {{ $t("linkin") }}
+                    </NuxtLink>
                   </li>
                 </ul>
               </template>
             </ElementsDropDown>
-          </div> -->
+          </div>
 
           <!-- <div class="flex lg:hidden border-l border-box-border pl-2">
             <button

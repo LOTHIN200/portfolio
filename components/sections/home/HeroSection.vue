@@ -42,13 +42,13 @@
           <div
             class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0"
           >
-            <AtomsLinkBtn
+            <!-- <AtomsLinkBtn
               href="#"
               variant="primary"
               class="w-full sm:w-max flex justify-center"
             >
               {{ $t("contact") }}
-            </AtomsLinkBtn>
+            </AtomsLinkBtn> -->
 
             <!-- <AtomsLinkBtn
               href="#"

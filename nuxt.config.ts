@@ -42,6 +42,12 @@ export default defineNuxtConfig({
     lazy: true,
     vueI18n: "./i18n/i18n.config.ts",
   },
+  runtimeConfig: {
+    public: {
+      telegramUsername: process.env.TELEGRAM_USERNAME || "",
+      linkedinUsername: process.env.LINKEDIN_USERNAME || "",
+    },
+  },
   css: ["~/assets/css/app.css"],
   colorMode: {
     preference: "system",

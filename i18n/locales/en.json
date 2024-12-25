@@ -73,5 +73,7 @@
   "subject_is_required": "Title Is Required!",
   "text_is_required": "Your Opinions are Required!",
   "title": "Title",
-  "your_opinion": "You Opinions"
+  "your_opinion": "You Opinions",
+  "telegram": "Telegram",
+  "linkin": "LinkIn"
 }
