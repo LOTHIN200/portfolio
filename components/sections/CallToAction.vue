@@ -21,19 +21,14 @@
           </span>
         </div>
         <div class="mx-auto text-center max-w-xl md:max-w-2xl relative">
-          <h2
-            class="text-gray-800 pt-4 dark:text-white font-bold text-4xl md:text-5xl lg:text-6x"
+          <p
+            class="text-gray-800 pt-4 dark:text-white font-bold text-sm md:text-5xl lg:text-lg"
           >
-            Need Assistance or Have Questions?
             <span
               class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-[#8cd66a]"
-              >Contact us</span
             >
-            through email!
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300 pt-8 mx-auto max-w-xl">
-            Whether you need help or want to provide feedback, we're here to listen. Reach
-            out to us by sending an email, and we'll get back to you as soon as possible.
+              {{ $t("your_ideas_feedback") }}
+            </span>
           </p>
           <div class="mx-auto max-w-md sm:max-w-xl pt-10">
             <form @submit.prevent="sendEmail" class="items-center relative gap-x-2">

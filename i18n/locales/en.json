@@ -75,5 +75,18 @@
   "title": "Title",
   "your_opinion": "You Opinions",
   "telegram": "Telegram",
-  "linkin": "LinkedIn"
+  "linkin": "LinkedIn",
+  "developer_education_title": "About My Educations",
+  "developer_bachelor_study": "Pursuing a Bachelor's degree in Software Development demands dedication and rigorous study. Students tackle complex algorithms, programming languages, software architecture, and problem-solving techniques that lay the foundation for a successful career in technology.",
+  "mastering_programming_fundamentals": "Mastering Programming Fundamentals",
+  "continuous_learning_adaptability": "Continuous Learning and Adaptability",
+  "collaboration_communication_skills": "Collaboration and Communication Skills",
+  "mastering_programming_fundamentals_content": "A solid understanding of programming fundamentals like algorithms, data structures, and problem-solving is crucial. Mastery of these concepts forms the foundation for writing efficient and scalable code.",
+  "continuous_learning_adaptability_content": "Technology evolves rapidly, so being open to learning new tools, languages, and frameworks is essential. Continuous improvement ensures you stay relevant in the fast-paced development world.",
+  "collaboration_communication_skills_content": "Being able to work effectively in a team and communicate complex technical ideas clearly is vital for successful project completion. Good collaboration fosters innovation and problem-solving.",
+  "need_assistance": "Need Assistance or Have Questions?",
+  "contact_us": "Contact us!",
+  "assistance_feedback": " Whether you need help or want to provide feedback, we're here to listen. Reach out to us by sending an email, and we'll get back to you as soon as possible.",
+  "developer_growth": " To grow as a developer, focus on learning new programming languages, practice coding regularly, work on real-world projects, and engage with the developer community. Never stop experimenting and learning!",
+  "your_ideas_feedback": "Your ideas and feedback help us improve. Share them with us!"
 }

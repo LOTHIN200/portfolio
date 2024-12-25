@@ -12,43 +12,43 @@
             </span>
           </div>
           <div class="relative">
-            <AtomsTitle texte="Find out what makes up different from others" />
+            <AtomsTitle :texte="$t('developer_education_title')" />
             <p class="text-gray-600 dark:text-gray-300 pt-8">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias labore quas
-              natus? Repudiandae tempora autem corporis voluptatem ipsam voluptatibus
+              {{ $t("developer_bachelor_study") }}
             </p>
             <div class="space-y-4 pt-8">
               <div
                 class="p-4 rounded-xl border border-box-border transition hover:bg-gray-200 dark:hover:bg-box-bg"
               >
                 <h3 class="text-gray-700 dark:text-gray-200 font-semibold text-xl">
-                  Last and feasible topics
+                  {{ $t("mastering_programming_fundamentals") }}
                 </h3>
                 <p class="text-base text-gray-600 dark:text-gray-300">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  {{ $t("mastering_programming_fundamentals_content") }}
                 </p>
               </div>
               <div
                 class="p-4 rounded-xl border border-box-border transition hover:bg-gray-200 dark:hover:bg-box-bg"
               >
                 <h3 class="text-gray-700 dark:text-gray-200 font-semibold text-xl">
-                  Last and feasible topics
+                  {{ $t("continuous_learning_adaptability") }}
                 </h3>
                 <p class="text-base text-gray-600 dark:text-gray-300">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  {{ $t("continuous_learning_adaptability_content") }}
                 </p>
               </div>
               <div
                 class="p-4 rounded-xl border border-box-border transition hover:bg-gray-200 dark:hover:bg-box-bg"
               >
                 <h3 class="text-gray-700 dark:text-gray-200 font-semibold text-xl">
-                  Last and feasible topics
+                  {{ $t("collaboration_communication_skills") }}
                 </h3>
                 <p class="text-base text-gray-600 dark:text-gray-300">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  {{ $t("collaboration_communication_skills_content") }}
                 </p>
               </div>
             </div>
+
             <div class="pt-10 flex">
               <AtomsLinkBtn href="#" variant="primary"> Start Listning </AtomsLinkBtn>
             </div>
