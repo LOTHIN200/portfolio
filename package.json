@@ -28,6 +28,7 @@
     "vue3-toastify": "^0.2.8"
   },
   "devDependencies": {
+    "@nuxt/icon": "^1.10.3",
     "@nuxtjs/i18n": "^9.1.1",
     "@pinia/nuxt": "^0.9.0",
     "@types/nodemailer": "^6.4.17",

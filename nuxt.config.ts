@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@pinia/nuxt",
     "nuxt-nodemailer",
+    "@nuxt/icon",
   ],
   i18n: {
     locales: [
