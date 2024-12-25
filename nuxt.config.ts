@@ -49,6 +49,7 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/css/app.css"],
+  plugins: ["~/plugins/error-handler.ts"],
   colorMode: {
     preference: "system",
     fallback: "dark",
