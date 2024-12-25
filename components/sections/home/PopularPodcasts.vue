@@ -19,52 +19,59 @@
           <AtomsTitle :texte="$t('experienced_with_project')" />
         </div>
         <div class="flex items-center min-w-max gap-5">
-          <AtomsLinkBtn href="#" variant="primary"> See all </AtomsLinkBtn>
+          <!-- <AtomsLinkBtn href="#" variant="primary"> See all </AtomsLinkBtn> -->
         </div>
       </div>
       <div
         class="grid grid-cols-2 items-stretch sm:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-10 sm:gap-x-5 sm:gap-y-8"
       >
         <CardsPodCast
-          :title="$t('multiple_country_workers_management')"
-          href="#"
-          :duration="$t('two_years')"
-          cover-image="/images/project_vip.png"
+          v-for="(card, index) in cardData"
+          :key="index"
+          :title="card.title"
+          :href="card.href"
+          :duration="card.duration"
+          :cover-image="card.coverImage"
           category=""
           created-at=""
-          description="Lorem ipsum dolor sit amet,  voluptates porro"
-        />
-
-        <CardsPodCast
-          :title="$t('workers_management_system')"
-          href="#"
-          :duration="$t('one_years')"
-          cover-image="/images/mhachak.png"
-          category=""
-          created-at=""
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptates porro"
-        />
-
-        <CardsPodCast
-          :title="$t('hotel_management_own')"
-          href="#"
-          :duration="$t('whole_handle')"
-          cover-image="/images/hotel.png"
-          category=""
-          created-at=""
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptates porro"
-        />
-
-        <CardsPodCast
-          :title="$t('pos_management_system')"
-          href="#"
-          :duration="$t('two_months')"
-          cover-image="/images/pos_management.png"
-          category=""
-          created-at=""
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptates porro"
+          :description="card.description"
         />
       </div>
     </AtomsContainer>
   </section>
 </template>
+<script setup>
+const cardData = [
+  {
+    title: "multiple_country_workers_management",
+    href: "#",
+    duration: "two_years",
+    coverImage: "/images/project_vip.png",
+    description: "Lorem ipsum dolor sit amet, voluptates porro",
+  },
+  {
+    title: "workers_management_system",
+    href: "#",
+    duration: "one_years",
+    coverImage: "/images/mhachak.png",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptates porro",
+  },
+  {
+    title: "hotel_management_own",
+    href: "#",
+    duration: "whole_handle",
+    coverImage: "/images/hotel.png",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptates porro",
+  },
+  {
+    title: "pos_management_system",
+    href: "#",
+    duration: "two_months",
+    coverImage: "/images/pos_management.png",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptates porro",
+  },
+];
+</script>

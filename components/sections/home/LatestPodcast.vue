@@ -6,7 +6,7 @@
           <AtomsTitle :texte="$t('other_experiences')" />
         </div>
         <div class="flex items-center min-w-max relative">
-          <AtomsLinkBtn href="#" variant="primary"> Explore more </AtomsLinkBtn>
+          <!-- <AtomsLinkBtn href="#" variant="primary"> Explore more </AtomsLinkBtn> -->
         </div>
       </div>
       <div class="relative">

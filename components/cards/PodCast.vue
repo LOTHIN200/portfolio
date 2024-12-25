@@ -12,7 +12,7 @@
       <span
         class="absolute top-2 right-2 px-2 rounded-full text-sm text-white bg-primary"
       >
-        {{ duration }}
+        {{ $t(duration) }}
       </span>
     </div>
     <div
@@ -22,7 +22,7 @@
         <h2
           class="font-semibold pt-4 text-base md:text-lg lg:text-xl line-clamp-2 md:line-clamp-3 text-gray-700 dark:text-white"
         >
-          {{ title }}
+          {{ $t(title) }}
         </h2>
       </div>
       <div class="pt-3 sm:pt-5 min-h-max h-max">

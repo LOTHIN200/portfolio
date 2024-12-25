@@ -155,6 +155,47 @@
   </section>
 </template>
 <script setup>
+import { createClient } from "@supabase/supabase-js";
+const supabase = createClient(
+  "https://ovrfhspymtsczjtpaqdr.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im92cmZoc3B5bXRzY3pqdHBhcWRyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzUxMTA2NjMsImV4cCI6MjA1MDY4NjY2M30.-uZJYaKdlTlXnsQcLv8dL94EUkraAjWm-RB3NE1EDpg"
+);
+const newUser = {
+  name: "John Doe",
+  email: "john.doe@example.com",
+  password: "securepassword123", // Ensure you hash passwords before storing them
+  created_at: new Date().toISOString(),
+};
+insertUser(newUser);
+
+const countries = ref([]);
+async function insertUser(userData) {
+  const { data, error } = await supabase.from("users").insert([userData]);
+
+  if (error) {
+    console.error("Error inserting user:", error);
+  } else {
+    console.log("User inserted:", data);
+  }
+}
+
+async function getCountries() {
+  const { data, error } = await supabase.from("countries").select();
+  if (error) {
+    console.error("Error fetching countries:", error);
+  } else {
+    if (data.length > 0) {
+      console.log("Fetched countries:", data);
+      countries.value = data;
+    } else {
+      console.log("No countries found in the database.");
+    }
+  }
+}
+
+onMounted(() => {
+  getCountries();
+});
 import { ref, onMounted } from "vue";
 const { locale, t } = useI18n();
 
