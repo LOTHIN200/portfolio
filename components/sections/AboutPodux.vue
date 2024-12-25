@@ -24,9 +24,9 @@
             </span>
           </div>
           <div class="relative">
-            <AtomsTitle texte="We Share what we love the most with Tech Community" />
+            <AtomsTitle :texte="$t('dev_passion')" />
             <p class="text-gray-600 dark:text-gray-300 pt-8">
-              {{$t('passion_description')}}
+              {{ $t("passion_description") }}
             </p>
             <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
               <div
@@ -35,10 +35,10 @@
                 <h3
                   class="text-gray-800 dark:text-white font-bold text-xl sm:text-2xl lg:text-3xl"
                 >
-                  2019
+                  {{ $t("two_thousand_nine_teen") }}
                 </h3>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                  High School Graduated
+                  {{ $t("high_school_graduated") }}
                 </p>
               </div>
               <div
@@ -47,10 +47,10 @@
                 <h3
                   class="text-gray-800 dark:text-white font-bold text-xl sm:text-2xl lg:text-3xl"
                 >
-                  + 4
+                  {{ $t("four_plus") }}
                 </h3>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                  Year Graduated
+                  {{ $t("high_school_graduated_number") }}
                 </p>
               </div>
               <div
@@ -59,15 +59,17 @@
                 <h3
                   class="text-gray-800 dark:text-white font-bold text-xl sm:text-2xl lg:text-3xl"
                 >
-                  + 2
+                  {{ $t("two_plus") }}
                 </h3>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                  Years Experience
+                  {{ $t("year_experience") }}
                 </p>
               </div>
             </div>
             <div class="pt-10 flex">
-              <AtomsLinkBtn href="#" variant="primary"> Know more </AtomsLinkBtn>
+              <AtomsLinkBtn @click="downloadFile" variant="primary">
+                {{ $t("cv") }}
+              </AtomsLinkBtn>
             </div>
           </div>
         </div>
@@ -75,3 +77,12 @@
     </AtomsContainer>
   </section>
 </template>
+<script setup>
+const downloadFile = () => {
+  const fileUrl = "/pdf/Resume.pdf";
+  const a = document.createElement("a");
+  a.href = fileUrl;
+  a.download = "LOTHIN-Resume.pdf";
+  a.click();
+};
+</script>
