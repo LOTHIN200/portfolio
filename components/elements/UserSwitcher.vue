@@ -88,24 +88,24 @@ function selectUser(user: { name: string; avatar: string; username: string }) {
   <!-- Login Modal -->
   <Modal
     :isOpen="isLoginModalOpen"
-    title="Login"
+    title="login"
     :fields="[
       {
         id: 'username',
-        label: 'Username',
+        label: 'username',
         type: 'text',
         value: '',
-        placeholder: 'Enter username',
+        placeholder: 'enter_username',
       },
       {
         id: 'password',
-        label: 'Password',
+        label: 'password',
         type: 'password',
         value: '',
-        placeholder: 'Enter password',
+        placeholder: 'enter_password',
       },
     ]"
-    submitButtonText="Login"
+    submitButtonText="login"
     @update:isOpen="isLoginModalOpen = $event"
     @submit="isLoginModalOpen = false"
   />
@@ -113,24 +113,24 @@ function selectUser(user: { name: string; avatar: string; username: string }) {
   <!-- SignUp Modal -->
   <Modal
     :isOpen="isSignUpModalOpen"
-    title="Sign Up"
+    title="register"
     :fields="[
       {
         id: 'newUsername',
-        label: 'Username',
+        label: 'username',
         type: 'text',
         value: '',
-        placeholder: 'Enter username',
+        placeholder: 'enter_username',
       },
       {
         id: 'newPassword',
-        label: 'Password',
+        label: 'password',
         type: 'password',
         value: '',
-        placeholder: 'Enter password',
+        placeholder: 'enter_password',
       },
     ]"
-    submitButtonText="Sign Up"
+    submitButtonText="sign_up"
     @update:isOpen="isSignUpModalOpen = $event"
     @submit="isSignUpModalOpen = false"
   />
