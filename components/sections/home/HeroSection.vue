@@ -34,9 +34,7 @@
           <p
             class="text-gray-600 dark:text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-xl"
           >
-            Explore insights from top developers on coding practices, software design, and
-            the latest tech trends. Learn how developers tackle challenges, optimize their
-            workflows, and build impactful applications.
+            {{ $t("programming_details") }}
           </p>
 
           <div
@@ -173,9 +171,9 @@ const typedText1 = ref("");
 const typedText2 = ref("");
 const typedText3 = ref("");
 
-const word1 = t("find");
-const word2 = t("developer");
-const word3 = t("on_internet");
+const word1 = t("the_more_you");
+const word2 = t("learn");
+const word3 = t("the_more_you_nothing");
 
 const typingSpeed = 100;
 let index1 = 0;
@@ -234,7 +232,7 @@ const typeText3 = () => {
       typedText3.value = "";
       index1 = index2 = index3 = 0;
       typeText1();
-    }, 1000);
+    }, 10000);
   }
 };
 </script>

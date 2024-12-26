@@ -104,5 +104,20 @@
   "enter_username": "Enter Username",
   "enter_password": "Enter Password",
   "cancel": "Cancel",
-  "password": "Password"
+  "password": "Password",
+  "English": "English",
+  "Khmer": "Khmer",
+  "log_out": "Log Out",
+  "system": "System",
+  "dark": "Dark",
+  "light": "Light",
+  "facebook": "Facebook",
+  "linkedin": "LinkedIn",
+  "programming_details": "A programming language is a formal system used by developers to create software applications, perform tasks, or control hardware. It consists of a set of instructions that can be used to produce various outputs such as algorithms, computations, or user interfaces. These languages come in many forms, including high-level languages like Python, Java, or JavaScript, which are designed to be more human-readable, and low-level languages like Assembly or Machine Code, which are closer to hardware and more efficient for system-level operations.",
+  "software_is_invisible": "Software is the invisible",
+  "magic": "Magic",
+  "software_detail": "that makes the world a better place.",
+  "the_more_you": "The More You",
+  "learn": "Learn",
+  "the_more_you_nothing": "The More You Earn"
 }

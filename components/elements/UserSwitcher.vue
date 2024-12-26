@@ -3,12 +3,12 @@ import { ref } from "vue";
 const users = [
   {
     name: "login",
-    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+    avatar: "images/login.png",
     username: "john_doe",
   },
   {
     name: "log_out",
-    avatar: "https://randomuser.me/api/portraits/women/1.jpg",
+    avatar: "images/power.png",
     username: "jane_smith",
   },
   {
@@ -17,8 +17,8 @@ const users = [
     username: "alex_johnson",
   },
   {
-    name: "signup",
-    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+    name: "sign_up",
+    avatar: "images/add-user.png",
     username: "signup_user",
   },
 ];
@@ -54,8 +54,8 @@ function selectUser(user: { name: string; avatar: string; username: string }) {
       class="outline-none bg-transparent p-2.5 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center gap-2"
       @click="toggleDropdown"
     >
-      <img :src="selectedUser.avatar" alt="User Avatar" class="w-8 h-8 rounded-full" />
-      <span>{{ selectedUser.name }}</span>
+      <img :src="selectedUser.avatar" alt="User Avatar" class="w-5 h-5 rounded-full" />
+      <span>{{ $t(selectedUser.name) }}</span>
     </button>
     <div v-if="isOpen" class="fixed inset-0 z-30" @click="isOpen = false"></div>
     <transition
@@ -78,7 +78,7 @@ function selectUser(user: { name: string; avatar: string; username: string }) {
             @click="selectUser(user)"
           >
             <img :src="user.avatar" alt="User Avatar" class="w-8 h-8 rounded-full" />
-            <span>{{ user.name }}</span>
+            <span>{{ $t(user.name) }}</span>
           </li>
         </ul>
       </div>

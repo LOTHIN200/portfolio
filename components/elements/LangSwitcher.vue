@@ -63,7 +63,7 @@ function toggleLocaleDropdown(event: MouseEvent) {
             @click="$router.push(switchLocalePath(locale.code))"
           >
             <span>
-              {{ locale.name }}
+              {{ $t(locale.name) }}
             </span>
           </li>
         </ul>
