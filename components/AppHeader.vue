@@ -59,6 +59,7 @@ const navLinks = [
           <ElementsThemeSwitcher />
           <ElementsLangSwitcher />
           <ElementsContactSwitcher />
+          <ElementsUserSwitcher />
           <div class="hidden lg:flex lg:items-center gap-4">
             <!-- <AtomsLinkBtn
               :href="telegramLink"
