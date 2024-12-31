@@ -136,10 +136,10 @@ const cards = [
     ],
   },
   {
-    title: "How to Get Started with Desktop Development",
+    title: "window_setup",
     duration: "50 min",
     href: "#",
-    coverImage: "/images/team.jpg",
+    coverImage: "/images/window-setup.webp",
     description: [
       "An introductory guide to desktop development.",
       "Explore tools, languages, and frameworks.",

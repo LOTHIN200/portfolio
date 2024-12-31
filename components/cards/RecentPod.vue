@@ -19,7 +19,7 @@
         {{ title }}
       </h2>
       <div class="pt-2">
-        <NuxtLink
+        <!-- <NuxtLink
           @click.prevent="openModal"
           class="flex items-center text-white rounded-full p-0.5 pr-2 gap-2 text-sm border border-gray-100/20 w-max cursor-pointer hover:bg-primary"
         >
@@ -38,7 +38,7 @@
             </svg>
           </span>
           {{ $t("details") }}
-        </NuxtLink>
+        </NuxtLink> -->
       </div>
     </div>
   </div>
