@@ -88,7 +88,7 @@
                   class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover"
                 />
                 <img
-                  src="/images/chushin.jpg"
+                  src="/images/cirtificate.jpg"
                   width="40"
                   alt="avatar"
                   class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover -ml-2.5"
@@ -100,7 +100,7 @@
                   class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover -ml-2.5"
                 />
                 <img
-                  src="/images/chushin.jpg"
+                  src="/images/cirtificate.jpg"
                   width="40"
                   alt="avatar"
                   class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover -ml-2.5"
@@ -108,10 +108,18 @@
                 <span
                   class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 bg-body-color flex items-center justify-center text-xs text-gray-300 object-cover -ml-2.5"
                 >
-                  300+
+                  <img
+                    src="/images/chushin.jpg"
+                    width="40"
+                    alt="avatar"
+                    class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover -ml-2.5"
+                  />
+                  <!-- 300+ -->
                 </span>
               </div>
-              <div class="pl-2 text-gray-600 dark:text-gray-200">WordWide listners</div>
+              <div class="pl-2 text-gray-600 dark:text-gray-200">
+                <!-- WordWide listners -->
+              </div>
             </div>
           </div>
         </div>

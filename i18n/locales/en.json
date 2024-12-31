@@ -76,7 +76,7 @@
   "your_opinion": "You Opinions",
   "telegram": "Telegram",
   "linkin": "LinkedIn",
-  "developer_education_title": "About My Educations",
+  "developer_education_title": "Opinions Of Educations",
   "developer_bachelor_study": "Pursuing a Bachelor's degree in Software Development demands dedication and rigorous study. Students tackle complex algorithms, programming languages, software architecture, and problem-solving techniques that lay the foundation for a successful career in technology.",
   "mastering_programming_fundamentals": "Mastering Programming Fundamentals",
   "continuous_learning_adaptability": "Continuous Learning and Adaptability",
@@ -119,5 +119,6 @@
   "software_detail": "that makes the world a better place.",
   "the_more_you": "The More You",
   "learn": "Learn",
-  "the_more_you_nothing": "The More You Earn"
+  "the_more_you_nothing": "The More You Earn",
+  "window_setup": "Window Setup"
 }

@@ -50,7 +50,7 @@
             </div>
 
             <div class="pt-10 flex">
-              <AtomsLinkBtn href="#" variant="primary"> Start Listning </AtomsLinkBtn>
+              <!-- <AtomsLinkBtn href="#" variant="primary"> Start Listning </AtomsLinkBtn> -->
             </div>
           </div>
         </div>
@@ -70,6 +70,11 @@
             >
               <source src="/videos/certificate_day.MOV" type="video/mp4" />
             </video>
+            <img
+              src="/images/cirtificate.jpg"
+              alt="Overlay Image"
+              class="absolute w-1/4 h-auto top-12 left-2/9 transform -translate-x-1/2 -translate-y-1/2 rounded-md border-2 border-white shadow-lg"
+            />
             <img
               src="/images/team.jpg"
               alt="Illustratuin about"
