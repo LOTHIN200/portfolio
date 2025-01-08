@@ -73,7 +73,7 @@
             <img
               src="/images/cirtificate.jpg"
               alt="Overlay Image"
-              class="absolute w-1/4 h-auto top-12 left-2/9 transform -translate-x-1/2 -translate-y-1/2 rounded-md border-2 border-white shadow-lg"
+              class="absolute w-1/4 h-auto top-12 left-2/4 transform -translate-x-1/2 -translate-y-1/2 rounded-md border-2 border-white shadow-lg"
             />
             <img
               src="/images/team.jpg"
