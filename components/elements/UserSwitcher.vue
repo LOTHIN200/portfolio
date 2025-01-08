@@ -42,7 +42,7 @@ function selectUser(user: { name: string; avatar: string; username: string }) {
     isLoginModalOpen.value = true;
   }
 
-  if (user.name === "signup") {
+  if (user.name === "sign_up") {
     isSignUpModalOpen.value = true;
   }
 }
@@ -115,6 +115,13 @@ function selectUser(user: { name: string; avatar: string; username: string }) {
     :isOpen="isSignUpModalOpen"
     title="register"
     :fields="[
+      {
+        id: 'photo',
+        label: 'photo',
+        type: 'file',
+        value: '',
+        placeholder: 'photo',
+      },
       {
         id: 'newUsername',
         label: 'username',
