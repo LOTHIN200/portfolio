@@ -39,7 +39,7 @@ onMounted(() => {
   texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
 
   // Add a cube with the texture
-  const geometry = new THREE.BoxGeometry(3, 3, 3); // Larger cube
+  const geometry = new THREE.BoxGeometry(4, 4, 4); // Larger cube
   const material = new THREE.MeshBasicMaterial({ map: texture });
   cube = new THREE.Mesh(geometry, material);
   scene.add(cube);
