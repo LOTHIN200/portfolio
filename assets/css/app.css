@@ -1,51 +1,78 @@
 :root {
-    --color-primary: 23 185 120;
-    --color-secondary: 248 143 194;
-    --color-green: 140 214 106;
-    --color-bg : 255 255 255; 
-    --color-border : 255 255 255; 
-    --color-box: 255 255 255;
-    --box-border: 229 231 235;
-    --box-sd: 226 232 240 / 0.5;
+  --color-primary: 23 185 120;
+  --color-secondary: 248 143 194;
+  --color-green: 140 214 106;
+  --color-bg: 255 255 255;
+  --color-border: 255 255 255;
+  --color-box: 255 255 255;
+  --box-border: 229 231 235;
+  --box-sd: 226 232 240 / 0.5;
 }
-  
+
 .dark {
-    --color-bg: 17 24 39; /* gray-900 */
-    --color-box: 17 26 62; /* k    55 65 81 */
-    --box-border: 243 244 246/0.1;
-    --box-sd: transparent;
+  --color-bg: 17 24 39; /* gray-900 */
+  --color-box: 17 26 62; /* k    55 65 81 */
+  --box-border: 243 244 246/0.1;
+  --box-sd: transparent;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html{
-    @apply scroll-smooth;
-    font-family: KhmerFont;
+html {
+  @apply scroll-smooth;
+  font-family: KhmerFont;
+  scroll-behavior: smooth;
 }
-
-body{
-    @apply bg-body transition overflow-x-hidden;
-    font-family: KhmerFont;
+html * {
+  cursor: none !important;
 }
-
-.invisible-scroll{
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    scroll-padding-left: 10px;
-    scroll-padding-right: 10px;
+body {
+  @apply bg-body transition overflow-x-hidden;
+  font-family: KhmerFont, FiraCode;
+  cursor: none;
+}
+* {
+  cursor: none !important;
+}
+::-webkit-scrollbar {
+  cursor: none;
+}
+.invisible-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-padding-left: 10px;
+  scroll-padding-right: 10px;
 }
 
 .invisible-scroll::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+.invisible-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-padding-left: 10px;
+  scroll-padding-right: 10px;
+}
+
+.invisible-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 @font-face {
-    font-family: 'KhmerFont';
-    src: url('../font/Kantumruy-Regular.woff') format('woff'); /* Adjust the path as needed */
-    font-weight: normal;
-    font-style: normal;
-  }
-  
+  font-family: "KhmerFont";
+  src: url("../font/Kantumruy-Regular.woff") format("woff"); /* Adjust the path as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraCode";
+  src: url("../font/FiraCode-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
