@@ -124,7 +124,9 @@
           </div>
         </div>
         <div class="lg:h-full hidden md:flex">
-          <div
+          <Humen class="relative -translate-x-64" />
+
+          <!-- <div
             class="flex w-full h-96 min-h-[24rem] lg:min-h-[none] lg:w-full lg:h-full items-center relative"
           >
             <div
@@ -154,7 +156,7 @@
                 class="w-full h-full rounded-2xl object-cover"
               />
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </AtomsContainer>
