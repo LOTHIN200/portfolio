@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
 
 const circle = ref(null);
 const circleX = ref(0);
@@ -36,6 +36,12 @@ const animate = () => {
 
   requestAnimationFrame(animate);
 };
+
+// Define circleStyle as a computed property
+const circleStyle = computed(() => ({
+  left: `${circleX.value}px`,
+  top: `${circleY.value}px`,
+}));
 
 onMounted(() => {
   window.addEventListener("mousemove", updateCirclePosition);
