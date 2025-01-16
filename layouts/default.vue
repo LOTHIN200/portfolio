@@ -4,7 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/vue";
 
 <template>
   <div>
-    <!-- <Humen /> -->
+    <Humen />
     <MouseCircle />
     <AppParticle />
     <SpeedInsights />
