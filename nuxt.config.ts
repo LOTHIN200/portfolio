@@ -12,7 +12,12 @@ export default defineNuxtConfig({
   },
   ssr: true,
   compatibilityDate: "2024-11-01",
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+    timeline: {
+      enabled: true,
+    },
+  },
   modules: [
     "@nuxtjs/color-mode",
     "@nuxt/image",
@@ -21,7 +26,11 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "nuxt-nodemailer",
     "@nuxt/icon",
+    "@tresjs/nuxt",
   ],
+  tres: {
+    glsl: true,
+  },
   i18n: {
     locales: [
       {
