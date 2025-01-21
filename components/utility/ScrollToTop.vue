@@ -2,7 +2,7 @@
   <button
     v-if="showButton"
     @click="scrollToTop"
-    class="scroll-to-top"
+    class="scroll-to-top outline-cyan-950"
     :class="{ show: showButton }"
   >
     ↑
@@ -52,10 +52,9 @@ onUnmounted(() => {
   bottom: 20px;
   right: 20px;
   padding: 10px 15px;
-  background-color: rgb(0 216 165 / var(--tw-bg-opacity, 1));
-  color: white;
-  border: none;
+  color: green;
   border-radius: 50%;
+  border: 2px solid green;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;

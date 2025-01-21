@@ -29,5 +29,5 @@ onMounted(() => {
     <SectionsCallToAction class="luxy-el reveal" id="contact" />
     <AppFooter class="luxy-el" />
   </div>
-  <UtilityScrollToTop />
+  <UtilityScrollToTop class="reveal" />
 </template>
