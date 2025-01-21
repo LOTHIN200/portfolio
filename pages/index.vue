@@ -9,14 +9,14 @@ useHead({
 });
 </script>
 <template>
-  <div>
-    <AppHeader />
-    <SectionsHomeHeroSection />
-    <SectionsHomePopularPodcasts />
-    <SectionsAboutPodux />
-    <SectionsHomeLatestPodcast />
-    <SectionsWhyUs />
-    <SectionsCallToAction />
+  <div id="luxy">
+    <AppHeader class="luxy-el" data-speed="1.0" />
+    <SectionsHomeHeroSection class="luxy-el" data-speed="1.0" />
+    <SectionsHomePopularPodcasts class="luxy-el" data-speed="1.0" />
+    <SectionsAboutPodux class="luxy-el" data-speed="1.0" />
+    <SectionsHomeLatestPodcast class="luxy-el" data-speed="1.0" />
+    <SectionsWhyUs class="luxy-el" data-speed="1.0" />
+    <SectionsCallToAction class="luxy-el" data-speed="1.0" />
     <AppFooter />
   </div>
 </template>
