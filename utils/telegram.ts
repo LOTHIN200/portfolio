@@ -1,5 +1,5 @@
 export async function sendErrorToTelegram(errorMessage: string) {
-  const botToken = "7722042806: AAFHfKS_lFw9PvMyg2cu5We08Y8P9j5t1hU"; //process.env.TELEGRAM_BOT_TOKEN;
+  const botToken = "7722042806:AAFHfKS_lFw9PvMyg2cu5We08Y8P9j5t1hU"; //process.env.TELEGRAM_BOT_TOKEN;
   const chatId = "1019112810"; //process.env.TELEGRAM_CHAT_ID;
 
   const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
