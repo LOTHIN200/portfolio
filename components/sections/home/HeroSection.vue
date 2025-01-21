@@ -15,7 +15,7 @@
         <div class="lg:py-2">
           <div class="text-center lg:text-left h-48 md:h-42 lg:h-50">
             <h1
-              class="text-gray-600 space-x-8 pt-4 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl"
+              class="text-gray-600 space-x-3 pt-0 dark:text-white font-bold text-3xl md:text-4xl lg:text-5xl"
             >
               <span>{{ typedText1 }}</span>
               <span

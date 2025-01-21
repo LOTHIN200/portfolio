@@ -1,6 +1,6 @@
 <template>
   <div
-    class="lg:p-1 relative h-auto flex flex-col lg:rounded-2xl lg:bg-box-bg lg:shadow-lg lg:shadow-box-shadow lg:border lg:border-box-border"
+    class="reveal lg:p-1 relative h-auto flex flex-col lg:rounded-2xl lg:bg-box-bg lg:shadow-lg lg:shadow-box-shadow lg:border lg:border-box-border"
   >
     <div class="relative h-max min-h-max">
       <nuxt-img

@@ -30,7 +30,7 @@
             </p>
             <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
               <div
-                class="text-center rounded-xl bg-box-bg shadow-lg shadow-box-shadow border border-box-border p-3"
+                class="reveal text-center rounded-xl bg-box-bg shadow-lg shadow-box-shadow border border-box-border p-3"
               >
                 <h3
                   class="text-gray-800 dark:text-white font-bold text-xl sm:text-2xl lg:text-3xl"
@@ -42,7 +42,7 @@
                 </p>
               </div>
               <div
-                class="text-center rounded-xl bg-box-bg shadow-lg shadow-box-shadow border border-box-border p-3"
+                class="reveal text-center rounded-xl bg-box-bg shadow-lg shadow-box-shadow border border-box-border p-3"
               >
                 <h3
                   class="text-gray-800 dark:text-white font-bold text-xl sm:text-2xl lg:text-3xl"
@@ -54,7 +54,7 @@
                 </p>
               </div>
               <div
-                class="text-center rounded-xl bg-box-bg shadow-lg shadow-box-shadow border border-box-border p-3"
+                class="reveal text-center rounded-xl bg-box-bg shadow-lg shadow-box-shadow border border-box-border p-3"
               >
                 <h3
                   class="text-gray-800 dark:text-white font-bold text-xl sm:text-2xl lg:text-3xl"

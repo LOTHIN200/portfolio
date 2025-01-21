@@ -18,7 +18,7 @@
             </p>
             <div class="space-y-4 pt-8">
               <div
-                class="p-4 rounded-xl border border-box-border transition hover:bg-gray-200 dark:hover:bg-box-bg"
+                class="reveal p-4 rounded-xl border border-box-border transition hover:bg-gray-200 dark:hover:bg-box-bg"
               >
                 <h3 class="text-gray-700 dark:text-gray-200 font-semibold text-xl">
                   {{ $t("mastering_programming_fundamentals") }}
@@ -28,7 +28,7 @@
                 </p>
               </div>
               <div
-                class="p-4 rounded-xl border border-box-border transition hover:bg-gray-200 dark:hover:bg-box-bg"
+                class="reveal p-4 rounded-xl border border-box-border transition hover:bg-gray-200 dark:hover:bg-box-bg"
               >
                 <h3 class="text-gray-700 dark:text-gray-200 font-semibold text-xl">
                   {{ $t("continuous_learning_adaptability") }}
@@ -38,7 +38,7 @@
                 </p>
               </div>
               <div
-                class="p-4 rounded-xl border border-box-border transition hover:bg-gray-200 dark:hover:bg-box-bg"
+                class="reveal p-4 rounded-xl border border-box-border transition hover:bg-gray-200 dark:hover:bg-box-bg"
               >
                 <h3 class="text-gray-700 dark:text-gray-200 font-semibold text-xl">
                   {{ $t("collaboration_communication_skills") }}

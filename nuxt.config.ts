@@ -64,7 +64,7 @@ export default defineNuxtConfig({
       SUPABASE_KEY: process.env.SUPABASE_KEY || "",
     },
   },
-  css: ["~/assets/css/app.css"],
+  css: ["~/assets/css/app.css", "animate.css/animate.min.css"],
   plugins: ["~/plugins/error-handler.ts"],
   colorMode: {
     preference: "system",

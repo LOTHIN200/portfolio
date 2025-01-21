@@ -37,7 +37,10 @@ const navLinks = [
             <span class="flex">
               <img src="/logoCHUSHIN.png" alt="Illustratuin about" width="50"
             </span>
-            <span class="text-lg text-gray-700 dark:text-white">{{ $t("lothin") }}</span>
+            <span
+              class="text-lg text-gray-700 dark:text-white animate__animated animate__bounce"
+              >{{ $t("lothin") }}</span
+            >
           </NuxtLink>
         </div>
         <div
