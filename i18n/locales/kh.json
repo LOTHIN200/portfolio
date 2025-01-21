@@ -124,5 +124,7 @@
   "window_setup": "ការរៀបចំ Window",
   "dragdropcv": "អូស និងទម្លាក់ CV របស់អ្នកនៅទីនេះ ឬ",
   "browse": "រុករក",
-  "upload_your_cv": "បញ្ចូលចូល CV របស់អ្នក។"
+  "upload_your_cv": "បញ្ចូលចូល CV របស់អ្នក។",
+  "about_education": "អំពីការសិក្សា",
+  "company_certificate": "វិញ្ញាបនបត្រពីក្រុមហ៊ុន"
 }

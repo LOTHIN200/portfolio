@@ -66,9 +66,12 @@
                 </p>
               </div>
             </div>
-            <div class="pt-10 flex">
+            <div class="pt-10 flex gap-x-10">
               <AtomsLinkBtn href="#" @click="downloadFile" variant="primary">
                 {{ $t("cv") }}
+              </AtomsLinkBtn>
+              <AtomsLinkBtn href="#hero" variant="primary">
+                {{ $t("company_certificate") }}
               </AtomsLinkBtn>
             </div>
           </div>

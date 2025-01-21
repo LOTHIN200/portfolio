@@ -124,5 +124,7 @@
   "window_setup": "Window Setup",
   "dragdropcv": "Drag & drop your CV here or",
   "browse": "Browse",
-  "upload_your_cv": "Upload Your CV"
+  "upload_your_cv": "Upload Your CV",
+  "about_education": "About Education",
+  "company_certificate": "Company Certificate"
 }

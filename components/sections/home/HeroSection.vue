@@ -12,10 +12,10 @@
       <div
         class="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto"
       >
-        <div class="lg:py-2">
+        <div class="lg:py-2 flex flex-col justify-center">
           <div class="text-center lg:text-left h-48 md:h-42 lg:h-50">
             <h1
-              class="text-gray-600 space-x-3 pt-0 dark:text-white font-bold text-3xl md:text-4xl lg:text-5xl"
+              class="text-gray-600 space-x-8 pt-4 dark:text-white font-bold text-3xl md:text-4xl lg:text-5xl"
             >
               <span>{{ typedText1 }}</span>
               <span
@@ -25,7 +25,7 @@
               ><br />
             </h1>
             <h1
-              class="text-gray-600 pt-8 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl"
+              class="text-gray-600 pt-8 dark:text-white font-bold text-3xl md:text-4xl lg:text-5xl"
             >
               <span>{{ typedText3 }} </span>
             </h1>
@@ -36,6 +36,91 @@
           >
             {{ $t("programming_details") }}
           </p>
+
+          <div
+            class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0"
+          >
+            <AtomsLinkBtn
+              href="#contact"
+              variant="primary"
+              class="w-full sm:w-max flex justify-center"
+            >
+              {{ $t("contact") }}
+            </AtomsLinkBtn>
+
+            <AtomsLinkBtn
+              href="#education"
+              variant="costum"
+              costum-span-class="px-6 md:px-7 hover:bg-primary/10"
+              costum-text-color="text-primary "
+            >
+              <div class="flex items-center gap-3">
+                <span class="p-2 rounded-full border border-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+
+                <span> {{ $t("about_education") }} </span>
+              </div>
+            </AtomsLinkBtn>
+          </div>
+          <div class="pt-8 lg:pt-10 w-max mx-auto lg:mx-0">
+            <div
+              class="flex items-center text-center flex-col sm:flex-row gap-4 sm:gap-0"
+            >
+              <div class="flex items-center">
+                <img
+                  src="/images/cirtificate.jpg"
+                  width="40"
+                  alt="avatar"
+                  class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover"
+                />
+                <img
+                  src="/images/lothin.jpg"
+                  width="40"
+                  alt="avatar"
+                  class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover -ml-2.5"
+                />
+                <img
+                  src="/images/lothin_team.jpg"
+                  width="40"
+                  alt="avatar"
+                  class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover -ml-2.5"
+                />
+                <img
+                  src="/images/chushin.jpg"
+                  width="40"
+                  alt="avatar"
+                  class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover -ml-2.5"
+                />
+                <span
+                  class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 bg-body-color flex items-center justify-center text-xs text-gray-300 object-cover -ml-2.5"
+                >
+                  <img
+                    src="/images/team.jpg"
+                    width="40"
+                    alt="avatar"
+                    class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover -ml-2.5"
+                  />
+                </span>
+              </div>
+              <div class="pl-2 text-gray-600 dark:text-gray-200">
+                <!-- WordWide listners -->
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Responsive Humen -->
