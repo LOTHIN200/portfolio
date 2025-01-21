@@ -40,7 +40,7 @@
 
         <!-- Responsive Humen -->
         <div class="lg:h-full hidden md:flex">
-          <Humen class="relative -translate-x-64" />
+          <UtilityHumen class="relative -translate-x-64" />
         </div>
       </div>
     </AtomsContainer>

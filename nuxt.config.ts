@@ -18,6 +18,9 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  routeRules: {
+    "/upload": { redirect: "/cv" },
+  },
   modules: [
     "@nuxtjs/color-mode",
     "@nuxt/image",
