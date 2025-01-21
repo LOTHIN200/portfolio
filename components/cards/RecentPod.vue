@@ -1,5 +1,5 @@
 <template>
-  <div class="reveal w-full relative rounded-2xl overflow-hidden">
+  <div class="w-full relative rounded-2xl overflow-hidden">
     <!-- Cover Image -->
     <nuxt-img
       :src="coverImage"
