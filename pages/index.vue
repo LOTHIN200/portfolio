@@ -10,13 +10,13 @@ useHead({
 </script>
 <template>
   <div id="luxy">
-    <AppHeader class="luxy-el" data-speed="1.0" />
-    <SectionsHomeHeroSection class="luxy-el" data-speed="1.0" />
-    <SectionsHomePopularPodcasts class="luxy-el" data-speed="1.0" />
-    <SectionsAboutPodux class="luxy-el" data-speed="1.0" />
-    <SectionsHomeLatestPodcast class="luxy-el" data-speed="1.0" />
-    <SectionsWhyUs class="luxy-el" data-speed="1.0" />
-    <SectionsCallToAction class="luxy-el" data-speed="1.0" />
-    <AppFooter />
+    <AppHeader class="luxy-el" />
+    <SectionsHomeHeroSection class="luxy-el" />
+    <SectionsHomePopularPodcasts class="luxy-el" />
+    <SectionsAboutPodux class="luxy-el" />
+    <SectionsHomeLatestPodcast class="luxy-el" />
+    <SectionsWhyUs class="luxy-el" />
+    <SectionsCallToAction class="luxy-el" />
+    <AppFooter class="luxy-el" />
   </div>
 </template>
