@@ -3,11 +3,11 @@ import { onMounted } from "vue";
 
 export default defineNuxtPlugin((nuxtApp) => {
   // onMounted(() => {
-  if (import.meta.client) {
+  if (process.client) {
     Luxy.init({
       wrapper: "#luxy",
       targets: ".luxy-el",
-      wrapperSpeed: 0.1,
+      wrapperSpeed: 0.08,
     });
   }
   // });
