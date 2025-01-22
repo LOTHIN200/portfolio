@@ -70,9 +70,9 @@
               <AtomsLinkBtn href="#" @click="downloadFile" variant="primary">
                 {{ $t("cv") }}
               </AtomsLinkBtn>
-              <AtomsLinkBtn href="#hero" variant="primary">
+              <!-- <AtomsLinkBtn href="#hero" variant="primary">
                 {{ $t("company_certificate") }}
-              </AtomsLinkBtn>
+              </AtomsLinkBtn> -->
             </div>
           </div>
         </div>
