@@ -1,47 +1,48 @@
 <template>
   <div>
     <div class="fixed top-4 right-4 z-50">
-      <button
+      <AtomsLinkBtn
         @click="toggleSound"
-        class="p-3 bg-gray-800 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-200 focus:outline-none"
+        href="#"
+        variant="costum"
+        costum-span-class="px-6 md:px-7 hover:bg-primary/10"
+        costum-text-color="text-primary"
       >
-        <svg
-          v-if="!isPlaying"
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 text-white"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-          />
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-        <svg
-          v-else
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 text-white"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      </button>
+        <div class="flex items-center gap-3">
+          <span class="p-2 rounded-full border border-primary">
+            <svg
+              v-if="!isPlaying"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-3 h-3"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <svg
+              v-if="isPlaying"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-3 h-3"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6 5h2v14H6V5zm10 0h2v14h-2V5z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </div>
+      </AtomsLinkBtn>
     </div>
   </div>
 </template>
