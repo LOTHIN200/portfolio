@@ -1,8 +1,7 @@
 import Luxy from "luxy.js";
-import { onMounted } from "vue";
 
 export default defineNuxtPlugin((nuxtApp) => {
-  onMounted(() => {
+  nuxtApp.hook("app:mounted", () => {
     if (process.client) {
       Luxy.init({
         wrapper: "#luxy",
