@@ -1,8 +1,7 @@
 import Luxy from "luxy.js";
-
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.hook("app:mounted", () => {
-    if (nuxtApp.isClient) {
+    if (process.client) {
       setTimeout(() => {
         const luxyElement = document.getElementById("luxy");
         if (luxyElement) {
