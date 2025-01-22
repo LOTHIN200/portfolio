@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/vue";
   <div>
     <UtilityMouseCircle />
     <UtilityAppParticle />
-    <SpeedInsights />
+    <SpeedInsights v-if="process.client" />
     <slot />
   </div>
 </template>
