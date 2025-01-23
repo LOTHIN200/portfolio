@@ -44,24 +44,50 @@
         </div>
       </AtomsLinkBtn>
     </div>
+
+    <!-- Add a prompt for user interaction -->
+    <div
+      v-if="!hasInteracted"
+      class="fixed inset-0 flex items-center justify-center bg-black/50 z-50"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <p class="mb-4">Click anywhere to enable sound.</p>
+        <button @click="enableSound" class="px-4 py-2 bg-primary text-white rounded">
+          Enable Sound
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+
 const isPlaying = ref(false);
+const hasInteracted = ref(false);
 let soundInstance: any = null;
+
 onMounted(async () => {
   try {
     const soundModule = await import("@pixi/sound");
     soundInstance = soundModule.Sound.from({
-      url: "/sounds/lough001.mp3",
+      url: "/sounds/developer.mp3",
       preload: true,
+      loop: true,
     });
   } catch (error) {
     console.error("Failed to load sound library:", error);
   }
 });
+
+const enableSound = () => {
+  hasInteracted.value = true;
+  if (soundInstance) {
+    soundInstance.play();
+    isPlaying.value = true;
+  }
+};
+
 const toggleSound = (): void => {
   if (!soundInstance) {
     console.error("Sound is not loaded.");
