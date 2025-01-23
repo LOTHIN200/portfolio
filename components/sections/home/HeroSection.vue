@@ -44,6 +44,7 @@
               href="#contact"
               variant="primary"
               class="w-full sm:w-max flex justify-center"
+              :isActive="true"
             >
               {{ $t("contact") }}
             </AtomsLinkBtn>

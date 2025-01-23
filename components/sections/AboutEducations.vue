@@ -67,7 +67,12 @@
               </div>
             </div>
             <div class="pt-10 flex gap-x-10">
-              <AtomsLinkBtn href="#" @click="downloadFile" variant="primary">
+              <AtomsLinkBtn
+                href="#"
+                @click="downloadFile"
+                variant="primary"
+                :isActive="true"
+              >
                 {{ $t("cv") }}
               </AtomsLinkBtn>
               <!-- <AtomsLinkBtn href="#hero" variant="primary">
