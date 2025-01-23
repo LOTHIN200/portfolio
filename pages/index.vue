@@ -10,7 +10,6 @@ useHead({
   meta: [{ name: "description", content: "Podux Podcast landing page website." }],
   link: [{ rel: "icon", type: "image/png", href: "/logo.png" }],
 });
-
 onMounted(() => {
   $sr.reveal(".reveal", {
     interval: 200,

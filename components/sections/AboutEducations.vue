@@ -4,8 +4,13 @@
       <div class="grid md:grid-cols-2 gap-10 xl:gap-14 relative">
         <div class="flex md:h-full">
           <div
-            class="w-full md:h-full rounded-3xl bg-white dark:bg-body shadow-lg shadow-box-shadow border border-box-border"
+            class="w-full md:h-full rounded-3xl bg-white dark:bg-body shadow-lg shadow-box-shadow border-box-border"
           >
+            <!-- <UtilityCardsSwiper
+              width="500"
+              :slides="slides"
+              class="w-full h-full object-cover rounded-2xl"
+            /> -->
             <img
               src="/images/lothin_team.jpg"
               alt="Illustratuin about"
@@ -94,4 +99,14 @@ const downloadFile = () => {
   a.download = "LOTHIN-Resume.pdf";
   a.click();
 };
+const slides = [
+  { id: 1, imageUrl: "/images/cpanel.png" },
+  { id: 2, imageUrl: "/images/ubuntu_server.png" },
+  { id: 3, imageUrl: "/images/docker.jpeg" },
+  { id: 4, imageUrl: "/images/gitlab.png" },
+  { id: 5, imageUrl: "/images/github.png" },
+  { id: 6, imageUrl: "/images/project_vip.png" },
+  { id: 7, imageUrl: "/images/pos_management.png" },
+  { id: 8, imageUrl: "/images/mhachak.png" },
+];
 </script>
