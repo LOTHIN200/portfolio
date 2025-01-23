@@ -12,7 +12,7 @@
       <div
         class="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto"
       >
-        <div class="lg:py-2 flex flex-col justify-center">
+        <div class="lg:py-2 flex flex-col justify-center reveal">
           <div class="text-center lg:text-left h-48 md:h-42 lg:h-50">
             <h1
               class="text-gray-600 space-x-8 pt-4 dark:text-white font-bold text-3xl md:text-4xl lg:text-5xl"

@@ -126,5 +126,9 @@
   "browse": "រុករក",
   "upload_your_cv": "បញ្ចូលចូល CV របស់អ្នក។",
   "about_education": "អំពីការសិក្សា",
-  "company_certificate": "វិញ្ញាបនបត្រពីក្រុមហ៊ុន"
+  "company_certificate": "វិញ្ញាបនបត្រពីក្រុមហ៊ុន",
+  "you_are_online_now": "អ្នកឥឡូវនៅលើបណ្ដាញ",
+  "you_are_offline_now": "អ្នកឥឡូវនៅក្រៅបណ្ដាញ",
+  "internet_connected": "អូយ! អ៊ីនធឺណិតត្រូវបានភ្ជាប់។ 😊",
+  "internet_disconnected": "អូ៎! អ៊ីនធឺណិតត្រូវបានដាច់។ 😊"
 }

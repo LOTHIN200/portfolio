@@ -21,12 +21,12 @@ onMounted(() => {
 <template>
   <div id="luxy">
     <AppHeader class="luxy-el reveal" />
-    <SectionsHomeHeroSection class="luxy-el reveal" id="hero" />
-    <SectionsHomePopularPodcasts class="luxy-el reveal" />
-    <SectionsAboutPodux class="luxy-el" id="education" />
-    <SectionsHomeLatestPodcast class="luxy-el reveal" />
-    <SectionsWhyUs class="luxy-el" />
-    <SectionsCallToAction class="luxy-el reveal" id="contact" />
+    <SectionsHomeHeroSection class="luxy-el" id="hero" />
+    <SectionsHomeProjectExperiences class="luxy-el reveal" />
+    <SectionsAboutEducations class="luxy-el" id="education" />
+    <SectionsHomeOtherExperiences class="luxy-el reveal" />
+    <SectionsEducationOpinion class="luxy-el" />
+    <SectionsContactMethods class="luxy-el reveal" id="contact" />
     <AppFooter class="luxy-el" />
   </div>
   <UtilityScrollToTop class="reveal" />

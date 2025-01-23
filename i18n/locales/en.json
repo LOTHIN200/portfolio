@@ -126,5 +126,9 @@
   "browse": "Browse",
   "upload_your_cv": "Upload Your CV",
   "about_education": "About Education",
-  "company_certificate": "Company Certificate"
+  "company_certificate": "Company Certificate",
+  "you_are_online_now": "You are online now",
+  "you_are_offline_now": "You are offline now",
+  "internet_connected": "Hurray! Internet is connected.",
+  "internet_disconnected": "Oops! Internet is disconnected."
 }
