@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="intro-container" v-if="introStore.showIntro">
+    <div class="intro-container" v-if="showIntro">
       <!-- Terminal-Like Animation -->
       <div class="terminal">
         <div class="terminal-header">
@@ -14,16 +14,18 @@
       </div>
     </div>
     <transition name="fade">
-      <slot v-if="!introStore.showIntro" />
+      <slot v-if="!showIntro" />
     </transition>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { useIntroStore } from "~/stores/intro"; // Corrected import path
 
-const introStore = useIntroStore(); // Initialize the store
+// Local state for showing/hiding the intro
+const showIntro = ref(true);
+
+// Code snippets for the terminal animation
 const codeSnippets = [
   "// Create Portfolio 🚀",
   "mkdir project && cd project",
@@ -41,6 +43,7 @@ const animatedCode = ref("");
 let currentIndex = 0;
 let charIndex = 0;
 
+// Function to simulate typing animation
 const typeCode = () => {
   if (currentIndex < codeSnippets.length) {
     if (charIndex < codeSnippets[currentIndex].length) {
@@ -55,11 +58,12 @@ const typeCode = () => {
     }
   } else {
     setTimeout(() => {
-      introStore.hideIntro(); // Use the store action to hide the intro
+      showIntro.value = false; // Hide the intro after animation completes
     }, 800); // Delay before ending intro
   }
 };
 
+// Start the typing animation when the component mounts
 onMounted(() => {
   typeCode();
 });
