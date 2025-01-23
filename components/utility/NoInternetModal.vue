@@ -46,11 +46,7 @@
             isOnline ? $t("you_are_online_now") : $t("you_are_offline_now")
           }}</span>
           <p>
-            {{
-              isOnline
-                ? $t('internet_connected')
-                : $t('internet_disconnected')
-            }}
+            {{ isOnline ? $t("internet_connected") : $t("internet_disconnected") }}
           </p>
         </div>
       </div>
@@ -121,6 +117,7 @@ onUnmounted(() => {
   top: 20px;
   left: 20px;
   animation: show_toast 1s ease forwards;
+  z-index: 9999;
 }
 
 @keyframes show_toast {
