@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="intro-container" v-if="showIntro">
+    <div class="intro-container" v-if="introStore.showIntro">
       <!-- Terminal-Like Animation -->
       <div class="terminal">
         <div class="terminal-header">
@@ -14,15 +14,16 @@
       </div>
     </div>
     <transition name="fade">
-      <slot v-if="!showIntro" />
+      <slot v-if="!introStore.showIntro" />
     </transition>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { useIntroStore } from "~/stores/intro"; // Corrected import path
 
-const showIntro = ref(true);
+const introStore = useIntroStore(); // Initialize the store
 const codeSnippets = [
   "// Create Portfolio 🚀",
   "mkdir project && cd project",
@@ -54,7 +55,7 @@ const typeCode = () => {
     }
   } else {
     setTimeout(() => {
-      showIntro.value = false;
+      introStore.hideIntro(); // Use the store action to hide the intro
     }, 800); // Delay before ending intro
   }
 };

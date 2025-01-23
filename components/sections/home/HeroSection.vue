@@ -17,17 +17,18 @@
             <h1
               class="text-gray-600 space-x-8 pt-4 dark:text-white font-bold text-3xl md:text-4xl lg:text-5xl"
             >
-              <span>{{ typedText1 }}</span>
+              <span ref="typedText1"></span>
               <span
                 class="text-transparent pl-18 pt-30 bg-clip-text bg-gradient-to-br from-primary to-[#8cd66a]"
               >
-                {{ typedText2 }} </span
-              ><br />
+                <span ref="typedText2"></span>
+              </span>
+              <br />
             </h1>
             <h1
               class="text-gray-600 pt-8 dark:text-white font-bold text-3xl md:text-4xl lg:text-5xl"
             >
-              <span>{{ typedText3 }} </span>
+              <span ref="typedText3"></span>
             </h1>
           </div>
 
@@ -135,56 +136,41 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-const { locale, t } = useI18n();
-onMounted(() => {
-  typeText1();
-});
-const users = ref([]);
-const typedText1 = ref("");
-const typedText2 = ref("");
-const typedText3 = ref("");
+import TypeIt from "typeit";
+
+const { t } = useI18n();
+
+const typedText1 = ref(null);
+const typedText2 = ref(null);
+const typedText3 = ref(null);
 
 const word1 = t("the_more_you");
 const word2 = t("learn");
 const word3 = t("the_more_you_nothing");
 
-const typingSpeed = 100;
-let index1 = 0;
-let index2 = 0;
-let index3 = 0;
-const typeText1 = () => {
-  if (index1 < word1.length) {
-    typedText1.value += word1[index1];
-    index1++;
-    setTimeout(typeText1, typingSpeed);
-  } else {
-    setTimeout(typeText2, 1000);
-  }
-};
+onMounted(() => {
+  // Initialize TypeIt for each text element
+  new TypeIt(typedText1.value, {
+    strings: word1,
+    speed: 100,
+    waitUntilVisible: true,
+    cursor: false, // Disable cursor
+  }).go();
 
-const typeText2 = () => {
-  if (index2 < word2.length) {
-    typedText2.value += word2[index2];
-    index2++;
-    setTimeout(typeText2, typingSpeed);
-  } else {
-    setTimeout(typeText3, 1000);
-  }
-};
+  new TypeIt(typedText2.value, {
+    strings: word2,
+    speed: 100,
+    startDelay: 1000, // Delay after the first text finishes
+    waitUntilVisible: true,
+    cursor: false, // Disable cursor
+  }).go();
 
-const typeText3 = () => {
-  if (index3 < word3.length) {
-    typedText3.value += word3[index3];
-    index3++;
-    setTimeout(typeText3, typingSpeed);
-  } else {
-    setTimeout(() => {
-      typedText1.value = "";
-      typedText2.value = "";
-      typedText3.value = "";
-      index1 = index2 = index3 = 0;
-      typeText1();
-    }, 10000);
-  }
-};
+  new TypeIt(typedText3.value, {
+    strings: word3,
+    speed: 100,
+    startDelay: 2000, // Delay after the second text finishes
+    waitUntilVisible: true,
+    cursor: false, // Disable cursor
+  }).go();
+});
 </script>
