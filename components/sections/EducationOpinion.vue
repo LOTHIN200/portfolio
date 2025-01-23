@@ -62,7 +62,7 @@
             class="w-full h-[27rem] sm:h-[30rem] md:h-full flex justify-start md:justify-end relative pb-5"
           >
             <video
-              class="w-2/5 aspect-square absolute bottom-0 right-0 md:left-0 object-cover rounded-t-[30%] rounded-b-[30%] border-4 border-box-border shadow-md shadow-box-shadow"
+              class="reveal w-2/5 aspect-square absolute bottom-0 right-0 md:left-0 object-cover rounded-t-[30%] rounded-b-[30%] border-4 border-box-border shadow-md shadow-box-shadow"
               autoplay
               loop
               muted
@@ -73,7 +73,7 @@
             <img
               src="/images/cirtificate.jpg"
               alt="Overlay Image"
-              class="absolute w-1/4 h-auto top-12 left-2/4 transform -translate-x-1/2 -translate-y-1/2 rounded-md border-2 border-white shadow-lg"
+              class="reveal absolute w-1/4 h-auto top-12 left-2/4 transform -translate-x-1/2 -translate-y-1/2 rounded-md border-2 border-white shadow-lg"
             />
             <img
               src="/images/team.jpg"

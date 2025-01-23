@@ -33,7 +33,7 @@ if (variant === "primary") {
 <template>
   <NuxtLink
     :to="href"
-    class="px-6 md:px-7 py-3 rounded-full relative group cursor-pointer btn--shockwave"
+    class="reveal px-6 md:px-7 py-3 rounded-full relative group cursor-pointer btn--shockwave"
     :class="{ 'is-active': isActive }"
   >
     <span
