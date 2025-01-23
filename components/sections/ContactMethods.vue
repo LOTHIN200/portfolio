@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20">
+  <section class="py-20 bg-gray-100 dark:bg-body">
     <AtomsContainer>
       <div
         class="w-full relative py-8 md:py-10 px-6 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 dark:to-body-color"

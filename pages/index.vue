@@ -20,14 +20,14 @@ onMounted(() => {
 
 <template>
   <div id="luxy">
-    <AppHeader class="luxy-el reveal" />
+    <AppHeader class="luxy-el" />
     <SectionsHomeHeroSection class="luxy-el" id="hero" />
-    <SectionsHomeProjectExperiences class="luxy-el reveal" />
+    <SectionsHomeProjectExperiences class="luxy-el" />
     <SectionsAboutEducations class="luxy-el" id="education" />
-    <SectionsHomeOtherExperiences class="luxy-el reveal" />
+    <SectionsHomeOtherExperiences class="luxy-el" />
     <SectionsEducationOpinion class="luxy-el" />
-    <SectionsContactMethods class="luxy-el reveal" id="contact" />
+    <SectionsContactMethods class="luxy-el" id="contact" />
     <AppFooter class="luxy-el" />
   </div>
-  <UtilityScrollToTop class="reveal" />
+  <UtilityScrollToTop />
 </template>

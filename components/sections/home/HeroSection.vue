@@ -1,6 +1,6 @@
 <template>
-  <section class="relative w-full">
-    <div class="absolute top-0 inset-x-0 h-64 flex items-start">
+  <section class="relative w-full min-h-screen flex items-center">
+    <div class="absolute top-0 inset-x-0 h-90 flex items-start">
       <div
         class="h-24 w-2/3 bg-gradient-to-br from-primary opacity-20 blur-2xl dark:from-[#570cac] dark:invisible dark:opacity-40"
       ></div>
@@ -8,7 +8,7 @@
         class="h-20 w-3/5 bg-gradient-to-r from-[#8cd66a] opacity-40 blur-2xl dark:from-[#670ccf] dark:opacity-40"
       ></div>
     </div>
-    <AtomsContainer class-name="relative">
+    <AtomsContainer class-name="relative flex-grow">
       <div
         class="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto"
       >

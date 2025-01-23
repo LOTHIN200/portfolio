@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-20 md:pt-24">
+  <section class="pt-20 md:pt-24 bg-gray-100 dark:bg-body">
     <AtomsContainer>
       <div class="grid md:grid-cols-2 gap-10 xl:gap-14 relative">
         <div class="md:py-2 lg:py-4 relative">

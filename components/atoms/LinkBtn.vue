@@ -54,13 +54,13 @@ if (variant === "primary") {
     transform: scale(1);
   }
   40% {
-    transform: scale(1.08);
+    transform: scale(1);
   }
   50% {
-    transform: scale(0.98);
+    transform: scale(1);
   }
   55% {
-    transform: scale(1.02);
+    transform: scale(1);
   }
   60% {
     transform: scale(0.98);
@@ -73,13 +73,13 @@ if (variant === "primary") {
 @keyframes shockwave {
   0% {
     transform: scale(1);
-    box-shadow: 0 0 2px rgba(255, 0, 0, 0.91), inset 0 0 1px rgba(4, 247, 81, 0.15);
+    box-shadow: 0 0 2px rgba(0, 255, 166, 0.94), inset 0 0 1px rgba(4, 247, 166, 0.94);
   }
   95% {
-    box-shadow: 0 0 50px transparent, inset 0 0 30px transparent;
+    box-shadow: 0 0 10px transparent, inset 0 0 20px transparent;
   }
   100% {
-    transform: scale(2.25);
+    transform: scale(1.5);
   }
 }
 
@@ -97,6 +97,7 @@ if (variant === "primary") {
   right: 0;
   animation: shockwave 1s ease-out infinite;
   border-radius: inherit; /* Use the same radius as the button */
+  z-index: 1;
 }
 
 .btn--shockwave.is-active::after {
