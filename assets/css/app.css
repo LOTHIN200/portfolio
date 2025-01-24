@@ -21,7 +21,7 @@
 @tailwind utilities;
 html {
   @apply scroll-smooth;
-  font-family: KhmerFont;
+  font-family: Fasthand;
   scroll-behavior: smooth;
 }
 html * {
@@ -29,7 +29,7 @@ html * {
 }
 body {
   @apply bg-body transition overflow-x-hidden;
-  font-family: KhmerFont, FiraCode;
+  font-family: Fasthand, Kantumruy;
   cursor: none;
 }
 * {
@@ -65,14 +65,20 @@ body {
 }
 
 @font-face {
-  font-family: "KhmerFont";
-  src: url("../font/Kantumruy-Regular.woff") format("woff"); /* Adjust the path as needed */
+  font-family: "Fasthand";
+  src: url("../font/Fasthand-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "FiraCode";
-  src: url("../font/FiraCode-Regular.woff") format("woff");
+  font-family: "Blazed";
+  src: url("../font/Blazed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Kantumruy";
+  src: url("../font/Kantumruy-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

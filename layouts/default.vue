@@ -5,8 +5,8 @@ import { SpeedInsights } from "@vercel/speed-insights/vue";
 <template>
   <div>
     <!-- <UtilityIntro /> -->
-    <UtilityNoInternetModal />
-    <UtilitySoundPlayer />
+    <!-- <UtilityNoInternetModal /> -->
+    <!-- <UtilitySoundPlayer /> -->
     <UtilityMouseCircle />
     <UtilityAppParticle />
     <SpeedInsights />
