@@ -25,16 +25,16 @@ html {
   scroll-behavior: smooth;
 }
 html * {
-  cursor: none !important;
+  /* cursor: none !important; */
 }
 body {
   @apply bg-body transition overflow-x-hidden;
   font-family: Fasthand, Kantumruy;
-  cursor: none;
+  /* cursor: none; */
 }
-* {
+/* * {
   cursor: none !important;
-}
+} */
 ::-webkit-scrollbar {
   cursor: none;
 }

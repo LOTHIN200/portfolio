@@ -10,20 +10,32 @@ function toggleNav(event: MouseEvent): void {
 
 const navLinks = [
   {
-    text: "Podcast",
-    href: "/",
+    text: "home",
+    href: "#hero",
   },
   {
-    text: "Solution",
-    href: "/",
+    text: "experience",
+    href: "#experience",
   },
   {
-    text: "Blog",
-    href: "/",
+    text: "education",
+    href: "#education",
   },
   {
-    text: "About",
-    href: "/",
+    text: "others",
+    href: "#others",
+  },
+  {
+    text: "opinion",
+    href: "#opinion",
+  },
+  {
+    text: "contact",
+    href: "#contact",
+  },
+  {
+    text: "skill_educated",
+    href: "#skill_educated",
   },
 ];
 </script>
@@ -48,13 +60,13 @@ const navLinks = [
           :class="navIsOpen ? '!visible !opacity-100 !translate-y-0' : ''"
         >
           <ul
-            class="text-gray-700 dark:text-gray-100 w-full flex lg:items-center gap-y-4 lg:gap-x-8 flex-col lg:flex-row"
+            class="text-gray-700 text-sm dark:text-gray-100 w-full flex lg:items-center gap-y-4 lg:gap-x-8 flex-col lg:flex-row"
           >
-            <!-- <AtomsNavLink
+            <AtomsNavLink
               v-for="navItem in navLinks"
               :href="navItem.href"
-              :text="navItem.text"
-            /> -->
+              :text="$t(navItem.text)"
+            />
           </ul>
         </div>
 
@@ -134,7 +146,7 @@ const navLinks = [
             </ElementsDropDown>
           </div> -->
 
-          <!-- <div class="flex lg:hidden border-l border-box-border pl-2">
+          <div class="flex lg:hidden border-l border-box-border pl-2">
             <button
               @click="toggleNav"
               class="outline-none w-7 h-auto flex flex-col relative"
@@ -160,7 +172,7 @@ const navLinks = [
                 "
               ></span>
             </button>
-          </div> -->
+          </div>
         </div>
       </nav>
     </AtomsContainer>

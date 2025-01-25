@@ -14,7 +14,7 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const showButton = ref(false);
-const borderColor = ref("green"); 
+const borderColor = ref("green");
 
 const handleScroll = () => {
   const heroSection = document.querySelector("#hero");
@@ -54,7 +54,7 @@ onUnmounted(() => {
 });
 </script>
 
-<style scoped>
+<style>
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -66,6 +66,7 @@ onUnmounted(() => {
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  z-index: 999999 !important;
 }
 
 .scroll-to-top.show {
