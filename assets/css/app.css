@@ -36,6 +36,39 @@ body {
 /* * {
   cursor: none !important;
 } */
+/* Hide scrollbar for Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.container {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+/* Hide scrollbar for IE and Edge */
+body {
+  -ms-overflow-style: none;
+}
 ::-webkit-scrollbar {
   cursor: none;
 }
