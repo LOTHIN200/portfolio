@@ -29,8 +29,9 @@ html * {
 }
 body {
   @apply bg-body transition overflow-x-hidden;
-  font-family: Fasthand, Kantumruy;
-  /* cursor: none; */
+  font-family: Fasthand, Arbane;
+  /* cursor: none;  */
+  /* font interest Arbane */
 }
 /* * {
   cursor: none !important;
@@ -79,6 +80,18 @@ body {
 @font-face {
   font-family: "Kantumruy";
   src: url("../font/Kantumruy-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Vellany";
+  src: url("../font/Vellany.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arbane";
+  src: url("../font/Arbane.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

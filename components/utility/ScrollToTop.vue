@@ -12,6 +12,12 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
+import { makeLink } from "~/utils/makeLink";
+
+const { locale, defaultLocale } = useI18n();
+const router = useRouter();
 
 const showButton = ref(false);
 const borderColor = ref("green");
@@ -23,7 +29,6 @@ const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
 
-    // Show/hide button logic
     if (scrollPosition > heroHeight) {
       showButton.value = true;
     } else {
@@ -31,7 +36,7 @@ const handleScroll = () => {
     }
 
     const scrollPercentage = (scrollPosition / documentHeight) * 100;
-    borderColor.value = `hsl(${scrollPercentage * 1.2}, 100%, 50%)`; // Adjust hue for color transition
+    borderColor.value = `hsl(${scrollPercentage * 1.2}, 100%, 50%)`;
   }
 };
 
@@ -40,6 +45,7 @@ const scrollToTop = () => {
     top: 0,
     behavior: "smooth",
   });
+  makeLink("/", locale.value, defaultLocale, router);
 };
 
 onMounted(() => {

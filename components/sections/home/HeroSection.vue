@@ -33,7 +33,7 @@
           </div>
 
           <p
-            class="reveal text-gray-600 dark:text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-xl"
+            class="reveal text-gray-600 leading-[2] dark:text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-xl"
           >
             {{ $t("programming_details") }}
           </p>
