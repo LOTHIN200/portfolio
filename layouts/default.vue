@@ -8,7 +8,9 @@ import { SpeedInsights } from "@vercel/speed-insights/vue";
     <!-- <UtilityNoInternetModal /> -->
     <UtilitySoundPlayer />
     <UtilityMouseCircle />
-    <UtilityAppParticle />
+    <!-- <UtilityAppParticle /> -->
+    <!-- <UtilityAppParticleDot /> -->
+    <UtilityAppParticleHeart />
     <SpeedInsights />
     <slot />
   </div>
