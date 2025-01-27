@@ -72,7 +72,7 @@ const navLinks = [
 
         <div class="flex items-center bg-inherit gap-1 lg:gap-3 min-w-max">
           <ElementsThemeSwitcher />
-          <ElementsPaticleSwitcher />
+          <!-- <ElementsPaticleSwitcher /> -->
           <ElementsLangSwitcher />
           <!-- <ElementsContactSwitcher /> -->
           <!-- <ElementsUserSwitcher /> -->

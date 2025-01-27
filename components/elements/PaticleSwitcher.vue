@@ -1,86 +1,61 @@
 <script lang="ts" setup>
 import { ref } from "vue";
-const users = [
-  {
-    name: "login",
-    avatar: "images/login.png",
-    username: "john_doe",
-  },
-  {
-    name: "log_out",
-    avatar: "images/power.png",
-    username: "jane_smith",
-  },
-  {
-    name: "Alex Johnson",
-    avatar: "https://randomuser.me/api/portraits/men/2.jpg",
-    username: "alex_johnson",
-  },
-  {
-    name: "sign_up",
-    avatar: "images/add-user.png",
-    username: "signup_user",
-  },
-];
+import { useParticleOptionsStore } from "~/store/particleOptions";
+import type { Container } from "tsparticles-engine";
+
+const particleOptionsStore = useParticleOptionsStore();
 
 const isOpen = ref(false);
-const isLoginModalOpen = ref(false);
-const isSignUpModalOpen = ref(false);
-const selectedUser = ref(users[0]);
+const StyleOption = ref(particleOptionsStore.selectedStyle);
 
 function toggleDropdown(event: MouseEvent) {
   event.preventDefault();
   isOpen.value = !isOpen.value;
 }
 
-function selectUser(user: { name: string; avatar: string; username: string }) {
-  selectedUser.value = user;
+function selectStyle(styleId: string) {
+  const particleOptionsStore = useParticleOptionsStore();
+  particleOptionsStore.setSelectedStyle(styleId);
   isOpen.value = false;
-
-  if (user.name === "login") {
-    isLoginModalOpen.value = true;
-  }
-
-  if (user.name === "sign_up") {
-    isSignUpModalOpen.value = true;
-  }
 }
 </script>
 
 <template>
-  <div class="relative py-2">
-    <button
-      class="outline-none bg-transparent p-2.5 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center gap-2"
-      @click="toggleDropdown"
-    >
-      <img :src="selectedUser.avatar" alt="User Avatar" class="w-5 h-5 rounded-full" />
-      <span>{{ $t(selectedUser.name) }}</span>
-    </button>
-    <div v-if="isOpen" class="fixed inset-0 z-30" @click="isOpen = false"></div>
-    <transition
-      enter-active-class="ease-out duration-300"
-      enter-from-class="transition transform opacity-0 translate-y-6"
-      enter-to-class="transition transform opacity-100 translate-y-0"
-      leave-active-class="transition ease-in duration-200"
-      leave-from-class="transform opacity-100 translate-y-0"
-      leave-to-class="transform opacity-0 translate-y-6"
-    >
-      <div
-        v-show="isOpen"
-        class="absolute border border-box-border shadow-md shadow-box-shadow z-40 top-full right-0 transition-all ease-linear p-2 rounded-xl w-44 bg-box-bg"
+  <div>
+    <div class="relative py-2">
+      <button
+        class="outline-none bg-transparent p-2.5 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center gap-2"
+        @click="toggleDropdown"
       >
-        <ul class="flex flex-col">
-          <li
-            v-for="user in users"
-            :key="user.username"
-            class="flex select-none cursor-pointer items-center gap-3 px-2 py-2 rounded-md transition hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-200"
-            @click="selectUser(user)"
-          >
-            <img :src="user.avatar" alt="User Avatar" class="w-8 h-8 rounded-full" />
-            <span>{{ $t(user.name) }}</span>
-          </li>
-        </ul>
-      </div>
-    </transition>
+        <img :src="StyleOption?.avatar" alt="User Avatar" class="w-5 h-5 rounded-full" />
+        <span>{{ $t(StyleOption?.name) }}</span>
+      </button>
+      <div v-if="isOpen" class="fixed inset-0 z-30" @click="isOpen = false"></div>
+      <transition
+        enter-active-class="ease-out duration-300"
+        enter-from-class="transition transform opacity-0 translate-y-6"
+        enter-to-class="transition transform opacity-100 translate-y-0"
+        leave-active-class="transition ease-in duration-200"
+        leave-from-class="transform opacity-100 translate-y-0"
+        leave-to-class="transform opacity-0 translate-y-6"
+      >
+        <div
+          v-show="isOpen"
+          class="absolute border border-box-border shadow-md shadow-box-shadow z-40 top-full right-0 transition-all ease-linear p-2 rounded-xl w-44 bg-box-bg"
+        >
+          <ul class="flex flex-col">
+            <li
+              v-for="style in particleOptionsStore.particleStyles"
+              :key="style.id"
+              class="flex select-none cursor-pointer items-center gap-3 px-2 py-2 rounded-md transition hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-200"
+              @click="selectStyle(style.id)"
+            >
+              <img :src="style.avatar" alt="User Avatar" class="w-8 h-8 rounded-full" />
+              <span>{{ $t(style.name) }}</span>
+            </li>
+          </ul>
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
